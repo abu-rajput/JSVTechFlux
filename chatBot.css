@@ -1,0 +1,1160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap'); /*log name use    */
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap');      /*services name    */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    /* font-family: "Kaushan Script", cursive; */
+
+}
+
+main #servicename{
+    /* font-family: "Ga Maamli", serif; */
+    /* font-family: "Kaushan Script", cursive; */
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+#chatbox{
+    display: none;
+}
+body{
+    /* background-color: rgb(252, 251, 251); */
+    background-color: #F1EDEE;
+
+}
+#fixed{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1.2vw;
+    z-index: 90;
+}
+#fixed #chat{
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2.5vw;
+    color: white;
+    border: 4px solid white;
+    background-color:#FF8811;
+    box-shadow: 0px 0px .2vw 0px black;
+}
+#fixed .message{
+    width: max-content;
+    /* height: 4vw; */
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+    padding: 1.5rem 1rem;
+    color:black;
+    box-shadow: 0px 0px 1px 0px black;
+    animation: popup ease 3s infinite;
+    animation-delay: 3s;
+
+    border-radius: .5rem;
+    background-color: rgba(255, 255, 255, 0.214);
+    backdrop-filter: blur(5px);
+}
+#fixed .message p{
+    width:fit-content;
+    line-height: 22px;
+}
+#fixed .message i , #messageExit{
+    font-size: x-large;
+}
+@keyframes popup {
+    10%{
+        scale: 1;
+    }
+    50%{
+        scale: .8;
+    }
+    
+}
+#fixed #chatbox{
+    width: 325px;
+    height: 450px;
+    bottom: 0px;
+    right: 0px;
+    /* background-color: rgb(244, 242, 242); */
+    border-radius: 1.5vw;
+    overflow: hidden;
+    position: relative;
+    background-color: #FF8811;
+
+}
+#fixed #chatbox #head{ 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: .7vw;
+
+}
+#fixed #chatbox #profile{
+    width: 4vw;
+    height: 4vw;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: white;
+}
+#fixed #chatbox #chatproces{
+    width: 100%;
+    height: 375px;
+    /* overflow: scroll; */
+    background-color:rgb(255, 255, 255);
+    border-radius: 1vw;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 1.5px 0px black;
+    padding: .7vw;
+
+}
+#fixed #chatbox #chatproces #bottom form{
+    width: 96%;
+    height: 3.7vw;
+    bottom: 5px;
+    align-self: center;
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: rgba(255, 255, 255, 0.214); */
+    /* backdrop-filter: blur(5px); */
+    padding: 0 .3rem;
+
+}
+#fixed #chatbox #chatproces #bottom input{
+    width: 80%;
+    font-size: 1.2rem;
+    outline: 0;
+    padding-left: .5rem ;
+    border: 0;
+}
+#fixed #chatbox #chatproces #bottom button{
+    width: 40px;
+    height: 40px;
+    padding: .3rem;
+    border-radius: 50%;
+    background-color: #FF8811;
+    color: white;
+    outline: none;
+    border: none;
+    
+
+}
+#fixed #chatbox #chatproces #bottom i{
+    font-size:1.5rem;
+    margin-left: .2rem;
+    transform: rotate(-40deg);
+
+}
+header{
+    width: 100%;
+    min-height:5vw;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:0 6vw;
+    /* background-color: #EEF4D4; */
+    background-color: white;
+    /* backdrop-filter: blur(5px); */
+    /* background: linear-gradient(111.5deg, rgb(228, 247, 255) 21.9%, rgb(255, 216, 194) 92.2%); */
+    
+    position:fixed;
+    top:0px;
+    box-shadow: 0px 0px 4px 0px ;
+    z-index: 100;
+}
+header nav #aboutser{
+    display: none;
+    
+}
+header #serach{
+    width: 17rem;
+    height: 2.2rem;
+    padding: 0px .5vw ;
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    
+}
+header #serach input{
+
+    font-size: 1.1rem;
+    position: relative;
+    outline: 0;
+    background-color: transparent;
+    border: none;
+
+}
+header #serach button i{
+    padding-top: .4rem;
+}
+header #serach button{
+    width: 40px;
+    height: 40px;
+    padding:.5vw .6vw ;
+    right: -1px;
+    display: flex;
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+    color: black;
+    position: absolute;
+    border: none;
+    z-index: 100;
+    outline: none;
+    border-top-right-radius: .5vw;
+    border-bottom-right-radius: .5vw;
+    font-size: x-large;
+    border-color: black;
+    top: -3px;
+
+}
+header nav{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+header nav ul{
+    width: max-content;
+    height: 100%;
+    display: flex;
+    /* gap: 2rem; */
+    list-style: none;
+    margin-top: -10px;
+
+
+}
+header .logo img{
+    width: 10vw;
+    margin-top: .4rem;
+}
+header nav li a{
+    width: 100%;
+    padding: 2vw 2.2vw;
+    list-style: none;
+    font-size:1.3rem;
+    color: black;
+    /* background-color: #FF8811; */
+    text-decoration: none;
+    text-transform: capitalize;
+    /* padding-bottom: 1.4rem; */
+    /* background-color: #FF8811; */
+}
+
+
+header nav a #service{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header nav #service i{
+    transform: rotate(90deg);
+}
+
+header nav li:hover a{
+    text-decoration: underline #FF8811;
+}
+header nav #service:hover #aboutser{
+    width: 86.7%;
+    z-index: -1;
+    height: 300px;
+    position: absolute;
+    left: 0px;
+    margin: 1.7vw 6vw;
+    right: -6vw;
+    background-color:white;
+    /* border-end-end-radius: 1vw; */
+    /* border-end-start-radius: 1vw; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: .05vw;
+}
+header nav  #aboutser .ser a{
+    width: 28.5vw;    
+    height: 11vw;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    border:0.1vw solid black
+}
+header nav  #aboutser .ser .icon{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header nav  #aboutser .ser .description{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    gap: .5vw;
+}
+header nav  #aboutser .ser .description p{
+    font-weight: 400;
+    font-size: smaller;
+}
+header nav  #aboutser .ser .icon img{
+    width: 4vw;
+    align-self: center;
+    object-fit: cover;
+    /* background-color: lightblue; */
+
+}
+header nav  #aboutser .ser:hover.ser{
+    background-color: #FF8811;
+}
+
+header #menu{
+    display: none;
+    position: relative;
+    text-transform: capitalize;
+    padding: 0rem .3rem;
+    background-color: white;
+    font-size: 1.5rem;
+    
+}
+
+header #menu i{
+    margin-top: 5px;
+}
+
+header #menu #cros{
+    display: none;
+    margin-left: 18px;
+}
+#sec-1{
+    width: 100%;
+    height: 80vh;
+    /* background-image: url(./img/and-machines-w88uf4P6wR4-unsplash.jpg); */
+    /* background-color: #04030F; */
+    background-position: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* color: #FF8811; */
+    color: #FF8811;
+    justify-content: center;
+}
+
+#sec-1 #content{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+    
+}
+#sec-1 #content img{
+    width: 100%;
+    margin-top: 3rem;
+    height: 140%;
+    object-fit: cover;
+    filter: brightness(75%);
+    /* -webkit-transform: scaleX(-1); */
+    /* transform: scaleX(-1); */
+}
+#sec-1 #content #data1{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: fit-content;
+    position: absolute;
+    padding:0 6vw;
+    z-index: 90;
+    color: black;
+    margin-top: 15vw;
+    
+
+}
+#data1 a{
+    width: max-content;
+}
+#sec-1 #content #data1 h1{
+    font-size:3vw;
+    /* color: white; */
+
+}
+#sec-1 #content #data1 h1 span{
+    color: #FF8811;
+    font-size: 3vw;
+}
+#sec-1 #content #data1 p{
+    line-height: 28px;
+    font-size: larger;
+    font-weight: 300;
+    /* color: rgb(31, 31, 31); */
+    color: white;
+}
+#sec-1 .content{
+    /* margin-top: 15vw; */
+    align-self: center;
+    text-align: center;
+}
+#sec-1 .content #most{
+    margin: 1rem 0 2.5rem;
+}
+#sec-1 .content p{
+    margin: 1.5rem 0rem ;
+    /* color:rgb(156, 156, 156); */
+    color: white;
+    text-transform: capitalize;
+    line-height: 28px;
+}
+#sec-1 .content h1 span{
+    width: 200px;
+    height: 90px;
+    margin: 5vw 1rem 0rem;
+    /* max-width: 40vw; */
+    /* background-color: white; */
+    border: 1.5rem solid white;
+    border-radius: 2rem;
+}
+#sec-1 .content h1{
+    font-size: 12vw;
+    display: flex;
+    justify-content: center;
+    align-self:center ;
+    margin-top: -2.2rem;
+}
+#sec-1 .content h2{
+    font-size: 3.5vw;
+}
+#sec-1 .content h2 span{
+    color: white;
+}
+#sec-1 a{
+    padding:.7vw 1.5vw;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 2rem ;
+    /* background-color: white; */
+    border: 1px solid white;
+    /* margin-top: 1rem; */
+}
+#sec-1 a:hover{
+    background-color: white;
+    color: black;
+
+}
+
+                        /* main  */
+main{
+    width: 100%;
+    padding:0rem 6vw;
+
+}
+#sec-1 #fixed{
+    position: fixed;
+    right: 1vw;
+    bottom: 1vw;
+}
+#sec-1 #fixed img{
+    width: 7vw;
+}
+
+                                /* work card */
+main #work{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    row-gap: 15px;
+    justify-content: space-evenly;
+    grid-column: 1rem;
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+@keyframes height {
+    from{
+        opacity: 0;
+        scale: 0;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+    
+}
+main #work  .wcard #back{
+    padding: .5vw 5vw;
+    border-radius: .2vw;
+    font-size: 2vw;
+    color: white;
+    background-color: #FF8811;
+}
+main #work  .wcard .data{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    margin-bottom: 2vw;
+}
+main #work  .wcard .data ul li{
+    width: 90%;
+    list-style: none;
+    margin:1rem 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    
+
+
+    /* font-size: 1.3vw; */
+
+}
+main #work  .wcard .data ul li span{
+    width: 88%;
+    display: inline-block;
+    text-align: left;
+    /* background-color: #FF8811; */
+    margin-left: .5rem;
+    line-height: 22px;
+}
+main #work  .wcard .data h1 span,sup{
+    font-size:xx-large;
+    color: #FF8811;
+}
+main #work  .wcard .data h1{
+    font-size: 4vw;
+}
+main #work  .wcard{
+    width: 23rem;
+    min-height: 23vw;
+    background-color: white;
+    box-shadow: 0px 0px 1px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 2vw;
+    /* animation: height linear;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 30%; */
+}        
+main #work  .wcard:hover{
+    box-shadow: 0px 0px 5px 0px ;
+}
+
+                                                    /* Contact */
+#contact{
+    width: 100%;
+    height: 55vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* background-color: orange; */
+    margin-top: 3rem;
+}
+#contact #conLeft{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vw;
+}
+#contact #conLeft p {
+    line-height: 28px;
+}
+#contact #conLeft h1{
+    font-size: 3vw;
+}
+#contact #conLeft span {
+    display: flex;
+    line-height: 28px;
+    /* font-size: 2vw; */
+
+}
+#contact #conLeft span .bx{
+    display: flex;
+    margin-right: 2vw;
+    font-size: 1.5vw;
+    color: #FF8811;
+}
+#contact #conRight{
+    width: 30%;
+    height:max-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    gap: 2vw;
+    padding: 4vw 2vw;
+    box-shadow: 0px 0px 1px 0px;
+}
+#contact #conRight input{
+    width: 100%;
+    padding: .7vw;
+    margin-bottom: 1.2vw;
+    border: 2px solid #FF8811;
+
+}
+#contact #conRight #message{
+    width: 100%;
+    height: 10vw;
+    
+    padding: .7vw;
+    margin-bottom: 1.2vw;
+    border: 2px solid #FF8811;
+
+}
+#contact #conRight button{
+    width: 100%;
+    padding: .7vw;
+    background-color: #FF8811;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+                                                    /* Footer */
+footer{
+    width: 100%;
+    height: fit-content;
+    padding:10vw 6vw 1vw;
+    background-color: black;
+}
+
+footer .follow{
+    width: 100%;
+    padding: 2vw 0;
+    color: white;
+    flex-wrap: wrap;
+    display: flex;
+    border-bottom: 2px solid white;
+    justify-content: space-between;
+}
+footer .follow .logo{
+    font-size: 2vw;
+    font-weight: bolder;
+
+}
+
+
+footer .follow span img{
+    width: 3vw;
+    aspect-ratio: 3/2;
+    /* height: 100%; */
+    object-fit: contain;
+    margin-left: 2vw;
+}
+footer .follow span #youtube{
+    width: 2.7vw;
+
+}
+footer #links{
+    width: 100%;
+    height: max-content;
+    padding: 3vw 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer #links ul a{
+    text-decoration: none;
+    font-weight: 200;
+
+    
+}
+footer #links ul a li {
+    color: white;
+    margin-top: 1vw;
+    list-style: none;
+}
+footer  #copy{
+    color: white;
+    text-align: center;
+    margin: 2rem ;
+}
+
+@media screen and (min-width:0px) and (max-width:480px) {
+    header{
+        padding: .3rem 4vw;
+    }
+    #fixed{
+        gap: .6rem;
+    }
+    #fixed #chat{
+        width: 15vw;
+        height: 15vw;
+        font-size: 1.7rem;
+        bottom: 3vw;
+        margin-right: .5rem;
+
+    }
+    #fixed .message{
+        padding:1rem;
+        font-size: small;
+        gap: 2.5vw;
+        margin-right: .5rem;
+        padding:1rem;
+    }
+    #fixed #chatbox{
+        width: 300px;
+        border-radius: 5vw;
+    }
+    #fixed #chatbox #head{ 
+        padding: 1rem;
+        padding: .6rem;
+    }
+    #fixed #chatbox #profile{
+        width: 14vw;
+        height: 14vw;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    #fixed #chatbox #chatproces{
+        height: 375px;
+    }
+    #fixed #chatbox #chatproces #bottom{
+        width: 100%;
+        margin-left: .3rem;
+    }
+    #fixed #chatbox #chatproces #bottom form{
+        width: 96%;
+        height: 12vw;
+        padding: 0 .3rem;
+    }
+    #fixed #chatbox #chatproces #bottom button{
+        width: 9vw;
+        height: 9vw;
+    }
+    #fixed #chatbox #chatproces #bottom i{
+        /* font-size: 1rem; */
+        margin-left: .1rem;
+    }
+    #sec-1{
+        width: 100%;
+        height:fit-content;
+        margin-top: .2rem;
+    }
+    main{
+        width: 100%;
+        padding: 0rem 4vw;
+        height:fit-content;
+    }
+    #sec-1 #content img{
+        width: 120%;
+        height: fit-content;
+        position: relative;
+        object-fit: cover;
+        filter: brightness(80%);
+    }
+    #sec-1 #content #data1{
+        width: 78%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        height: fit-content;
+        position: absolute;
+        padding:5vw;
+        z-index: 90;
+        color: black;
+        margin-top: 15vw;    
+    }
+    #sec-1 #content #data1 h1{
+        font-size: 5.3vw;
+    }
+    #sec-1 #content #data1 h1 span{
+        font-size: 5.3vw;
+    }
+    #sec-1 #content #data1 p{
+        line-height: 19px;
+        font-size:4vw;
+        font-weight: 300;
+        /* color: rgb(31, 31, 31); */
+        color: white;
+    }
+    #sec-1 #content a{
+        padding:1.8vw 4vw;
+        font-size: 4.5vw;
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+        border: none;
+        /* border-radius: 2rem ; */
+        /* background-color: white; */
+        border: 1px solid white;
+        /* margin-top: 1rem; */
+    }
+    #fixed #chatbox #chatproces {
+        border-top-left-radius: 5vw;
+        border-top-right-radius: 5vw;
+    }
+    #sec-1 #fixed img{
+        width: 13vw;
+        height: 13vw;
+        margin-right: 1vw;
+        z-index: 98;
+    }
+    #fixed #chatbox #chatproces #inp {
+        width: 100%;
+        height: 11vw;
+    }
+    header #menu{
+        display: block;
+        position: relative;
+    }
+    header #menu i{
+        font-size: 2rem;
+    }
+    header nav #navbar{
+        width: 100%;
+        height: 0px;
+        position: absolute;
+        top:115%;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        flex-direction: column;
+        background-color: white;
+        /* border-top: 1px solid black; */
+        background-color: white ;
+        backdrop-filter: blur(15px);
+        transition: height 1s linear;
+    }
+    header #navbar li{
+        width: fit-content;
+        padding: 20px;
+    }
+    
+    
+    header nav ul li a{
+        /* width: 100%; */
+        padding: 20px;
+    
+    }
+    header nav #service{
+        position: relative;
+    }
+    header nav #service:hover #aboutser {
+        width: 200%;
+        height: fit-content;
+        flex-direction: column;
+        top: -100%;
+        left: 75%;
+        position: absolute;
+    }
+    header nav #service:hover i{
+        transform: rotate(0deg);
+    }
+    header nav ul li #aboutser .ser {
+        width: 100%;
+    }
+    header nav #service:hover .ser {
+        background-color: transparent;
+    }
+
+    header nav ul li #aboutser .ser .icon, header nav ul li #aboutser .ser p{
+        display: none;
+
+    }
+    header nav #aboutser .ser a{
+        width: 100%;
+        height: auto;
+        border: none;
+        text-align: left;
+        font-size: large;
+    }
+    header .logo img{
+        width: 18vw;
+        margin-top: .4rem;
+    }
+    header #serach{
+        width: 12rem;
+        padding: 1.5vw;
+        overflow: hidden;
+    }
+
+    header #serach input{
+        width:87%;
+        font-size: 1rem;
+
+    }
+    header #serach button i{
+        padding: 20% 0;
+    }
+    /* work */
+    main #work {
+        height: fit-content;
+    }
+    main #work .wcard {
+        padding-bottom: 1rem;
+        
+    }
+    main #work .workcard2, main #work .workcard3{
+        animation: height  linear;
+        animation-timeline: view() ;
+        animation-range: entry 0%  cover 30%;
+    }
+    main #work .wcard #back {
+        font-size: x-large;
+        padding: .2rem 2rem;
+        margin-bottom: .5rem;
+    }
+    main #work .wcard .data h1 {
+        font-size: 9vw;
+    }
+                                            /* #contact */
+    #contact{
+        width: 100%;
+        height: 52vh;
+        margin-top: 0px;
+
+    }
+    #contact #conLeft{
+        width: 100%;
+        height: auto;
+        padding: 3vw 0;
+        animation: height  linear;
+        animation-timeline: view() ;
+        animation-range: entry 0%  cover 30%;
+        
+    }
+    #contact #conRight{
+        width: 100%;
+        /* height: 40vh; */
+        padding: 7vw 4vw;
+        margin-top: 1rem;
+        gap: 4vw;
+        animation: height  linear;
+        animation-timeline: view() ;
+        animation-range: entry 0%  cover 30%;
+
+    }
+    #contact #conLeft h1{
+        font-size: 7vw;
+        text-transform: capitalize;
+    
+    }
+
+    #contact #conLeft span .bx{
+        font-size: 5vw;
+        margin-right: 4vw;
+
+    
+    }
+    #contact #conRight input{
+        padding: 1.5vw;
+        margin-bottom: 3vw;
+
+    
+    }
+    #contact #conRight #message{
+        width: 100%;
+        height: 24vw;
+        padding: 1.5vw;
+
+    }
+    #contact #conRight button{
+        padding: 1.8vw 0;
+        font-size: 4vw;
+
+    }
+
+                                        /* footer */
+    #footer{
+        width: 100%;
+        height: fit-content;
+        margin-top: 10vw;
+    
+    }
+    footer .follow{
+        width: 100%;
+        margin-top: 2rem;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    footer .follow .logo{
+        font-size: 5vw;
+    }
+    footer .follow span #insta{
+        width: 8.8vw;
+    
+    }
+    footer .follow span img{
+        width: 6vw;
+        aspect-ratio: 3/2;
+        /* height: 100%; */
+        object-fit: contain;
+        margin-left: 2vw;
+    }
+    footer .follow span #youtube{
+        width: 5.6vw;
+    
+    }
+    footer #links{
+        width: 100%;
+    }
+    footer #links ul{
+        margin-right: 15vw;
+        margin-top: 6vw;
+    }
+    footer #links ul h3{
+        margin-bottom: .5rem;
+
+    }
+
+}
+                                                    /* tablet screen */
+@media screen and (min-width:481px) and (max-width:767px) {
+    header, main{
+        padding: .2rem 4vw;
+    }
+    /* sec-1 */
+    #sec-1{
+        height: fit-content;
+        /* margin-top: 2rem; */
+    }
+    /* chat */
+    #fixed #chat {
+        width: 9vw;
+        height: 9vw;
+        font-size: x-large;
+    }
+    #fixed #chatbox{
+        height: 62vw;
+    }
+    #fixed #chatbox #profile{
+        width: 8vw;
+        height: 8vw;
+    }
+    #fixed #chatbox #chatproces #bottom form {
+        height: fit-content;
+        bottom: 15vw;        
+
+    }
+    #fixed #chatbox #chatproces #bottom button {
+        width: 35px;
+        height: 35px;
+        margin: .1rem;
+    }
+    #sec-1 #fixed img{
+        /* width: 8vw; */
+        margin-right: 1vw;
+    }
+    header #menu{
+        display: block;
+    }
+    header nav{
+        display: none;
+    }
+    #sec-1 #content #data1 h1 ,#sec-1 #content #data1 h1 span{
+        font-size:5vw;
+    }
+    #sec-1 #content #data1{
+        width: 85%;
+        margin-top: 10vw;
+
+    }
+    #sec-1 #content #data1 p{
+        font-size: 3vw;
+    }
+    #sec-1 #content #data1 a{
+        padding: 1.3vw 3vw;
+        font-size: 1.2rem;
+    }
+                                                /* cards */
+    main #work .wcard {
+        height:max-content;
+    }
+    main #work .wcard #back {
+        font-size: 3.3vw;
+    }
+    main #work .wcard .data ul li {
+        padding: .5rem;
+    }
+
+    main #work .wcard .data h1 {
+        font-size: 8vw;
+    }
+                                    /* contact */
+    #contact{
+        width: 100%;
+        height:70vh;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #contact #conLeft h1{
+        font-size: 2rem;
+    }
+    main #contact #conLeft span .bx {
+        font-size: 3.5vw;
+      }
+    #contact #conRight{
+        width: 40%;
+        height: max-content;
+        padding: 2rem .7rem;
+    }
+    
+    #contact #conRight #message {
+        height: 15vw;
+    }
+    #contact #conRight button{
+        padding: 1.2vw;
+    }
+    
+    /* footer */
+    footer .follow .logo {
+        font-size: x-large;
+    }
+    footer .follow span img {
+        width: 4vw;
+    }
+    footer .follow span #youtube{
+        width: 3.5vw;
+    
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    header, main{
+        padding: .3rem 4vw;
+    }
+
+    #sec-1 {
+        width: 100%;
+        height: fit-content;
+   }
+   
+  
+                                /* card */
+  #card{
+    width: 100%;
+    height: fit-content;
+  }
+                                        /* contact */
+
+  main #contact{
+    width: 100%;
+    height:23vh;
+  }
+  
+  main #contact #conRight{
+    width: 40%;
+    padding: 3rem 1.2rem;
+  }
+}
