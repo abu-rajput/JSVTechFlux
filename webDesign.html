@@ -6,18 +6,18 @@
     <title>webDesign</title>
     <link rel="stylesheet" href="webDesign.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="./img/JSV TECH FLUX 11.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/log1.png" type="image/x-icon">
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="index.html"><img src="./img/JSV TECH FLUX2.png" alt=""></a>
+            <a href="webDesign.html"><img src="./img/JSV TECH FLUX2.png" alt=""></a>
     
         </div>
         <div id="serach">
             <form action=" ">
-                <input type="search" placeholder="Find Services">
-                <button type="submit" id=""><i class='bx bx-search'></i></button>
+                <input type="search" placeholder="Find Services" id="searchBar">
+                <div id="searchbtn"><i class='bx bx-search'></i></div>
             </form>
         </div>
         <nav >
@@ -142,9 +142,12 @@
         <h1 id="servicename">Web Design. </h1>
         <section id="work">
             <div class="workcard1 wcard">
-                <span id="back">Basic</span>
+                <span id="back">
+                    <p>Starter <br> pack !</p>
+                    <h1 id="price"><span>₹.</span>5,999<sup> +GST</sup></h1>
+
+                </span>
                 <div class="data">
-                    <h1><span>₹.</span>5,999<sup> +GST</sup></h1>
                     <ul>
                         <li><i class='bx bx-subdirectory-right'></i><span>1 Business Email-id </span></li>
                         <li><i class='bx bx-subdirectory-right'></i><span>SEO Ready Website </span></li>
@@ -157,9 +160,12 @@
                 </div>
             </div>
             <div class="workcard2 wcard">
-                <span id="back">Premium</span>
+                <span id="back">
+                    <p>special pro <br> pack !</p>
+                    <h1 id="price"><span>₹.</span>8,999<sup> +GST</sup></h1>
+                    
+                </span>
                 <div class="data">
-                    <h1><span>₹.</span>8,999<sup> +GST</sup></h1>
                     <ul>
                         <li><i class='bx bx-subdirectory-right'></i><span>5 Pages</span></li>
                         <li><i class='bx bx-subdirectory-right'></i><span> 1 Business Email Id</span></li>
@@ -174,9 +180,12 @@
                 </div>
             </div>
             <div class="workcard3 wcard">
-                <span id="back">Advance</span>
+                <span id="back">
+                    <p>corporate pro <br> pack !</p>
+                    <h1 id="price"><span>₹.</span>14,999<sup> +GST</sup></h1>
+
+                </span>
                 <div class="data">
-                    <h1><span>₹.</span>14,999<sup> +GST</sup></h1>
                     <ul>
                         <li><i class='bx bx-subdirectory-right'></i><span> 5 Pages </span></li>
                         <li><i class='bx bx-subdirectory-right'></i><span> 1 Business Email Id </span></li>
@@ -196,16 +205,44 @@
             
 
         </section> 
+        <section class="faq">
+            <div class=" q1" id="faq">
+                <div id="heading"><h1>Why is a website important?</h1><span id="minimaiz">+</span></div>
+                
+                <p >
+                    A website is important because it serves as a digital storefront for your business, providing a platform to showcase your products, services, and brand identity. It allows you to:
+                    <ol>
+                        <li><b>Reach a Global Audience</b> : A website makes your business accessible to anyone, anywhere, 24/7.</li>
+                        <li><b>Build Credibility</b> : A professional website establishes trust and legitimacy with your audience.
+                        </li>
+                        <li>
+                            <b>Market Your Business</b> : It serves as a hub for online marketing efforts, including SEO, social media, and ads.
+                        </li>
+                        <li>
+                            <b>Increase Engagement</b> : Customers can learn about your business, contact you, or make purchases conveniently.
+                        </li>
+                        <li>
+                            <b>Stay Competitive</b> : In today’s digital age, having a website is crucial for staying relevant and competing effectively in the market.
+                        </li>
+                    </ol>
+                </p>
+                
+            </div>
+           
+            
+           
+        </section>
        <section id="contact">
         <div id="conLeft">
-            <h1>Get in touch with us.</h1>
-            <p>9am to 7pm.</p>
-            <span><i class='bx bx-envelope'></i>jsvtechflux@gmail.com</span>
-            <span><i class='bx bx-mobile'></i> +91 8777351046</span>
+            <h1>Get in touch with us. <br><span>9am</span> to<span> 7pm</span>.</h1>
+
+            <span id="icon"><i class='bx bx-envelope'></i>jsvtechflux@gmail.com</span>
+            <span id="icon"><i class='bx bx-mobile'></i>
+                <a href="tel:+918777351046"> +91 8777351046</a></span>
         </div>
         <div id="conRight">
             <!-- <h1>Say Something</h1> -->
-            <form action="#">
+            <form >
                 <input type="text" placeholder="YOUR NAME_">
                 <input type="email" placeholder="YOUR E-MAIL_">
                 <textarea name=""  rows="10" id="message" placeholder="MESSAGE_"></textarea >
@@ -214,6 +251,7 @@
             </form>
         </div>
        </section>
+      
     </main>
     
     <footer>
@@ -224,7 +262,7 @@
                 <span><a href="#"><img src="./img/instagram.png" alt="" ></a></span>
                 <span><a href="#" ><img src="./img/youtube.png" alt="" id="youtube"></a></span>
 
-                <span><a href="#"><img src="./img/whatsapp2.png" alt=""></a></span>
+                <span><a href="https://wa.me/+918777351046"><img src="./img/whatsapp2.png" alt=""></a></span>
                 <span><a href="#"><img src="./img/linkdin2.png" alt="" ></a></span>
             </div>
         </div>
@@ -234,13 +272,13 @@
                 <a href="#about"><li>About Company</li></a>
                 <a href="#"><li>Our Team</li></a>
                 <a href="#"><li>Our Work</li></a>
-                <a href="#contact"><li>Contact Us</li></a>
+                
             </ul>
             <ul>
                 <h3>Quick Links</h3>
                     <a href="#"><li>Life at JSV Tech Flux</li></a>
                     <a href="#"><li>Career</li></a>
-                    <a href="#"><li>Our Work</li></a>
+                    <a href="#contact"><li>Contact Us</li></a>
             </ul>
             <ul>
                 <h3>Services</h3>
@@ -254,6 +292,7 @@
         <p id="copy">JSV Tech Flex Pvt Ltd &copy; 2024.</p>
     </footer>
 <script src="menu.js"></script>
+<script src="search.js"></script>
 <script src="chat.js"></script>
 <script src="contactclick.js"></script>
 </body>

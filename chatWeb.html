@@ -6,19 +6,19 @@
     <title>chatbotWithWebsite</title>
     <link rel="stylesheet" href="chatWeb.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="./img/JSV TECH FLUX2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/log1.png" type="image/x-icon">
 
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="index.html"><img src="./img/JSV TECH FLUX2.png" alt=""></a>
+            <a href="chatWeb.html"><img src="./img/JSV TECH FLUX2.png" alt=""></a>
     
         </div>
         <div id="serach">
             <form action=" ">
-                <input type="search" placeholder="Find Services">
-                <button type="submit" id=""><i class='bx bx-search'></i></button>
+                <input type="search" placeholder="Find Services" id="searchBar">
+                <div id="searchbtn"><i class='bx bx-search'></i></div>
             </form>
         </div>
         <nav >
@@ -143,9 +143,12 @@
         <h1 id="servicename">ChatBot + Web Design. </h1>
         <section id="work">
             <div class="workcard1 wcard">
-                <span id="back">Basic</span>
+                <span id="back">
+                    <p>Basic</p>
+                    <h1 id="price"><span>₹.</span>10,999 <sup> +GST</sup></h1>
+
+                </span>
                 <div class="data">
-                    <h1><span>₹.</span>10,999 <sup> +GST</sup></h1>
                     <ul>
                         <li><i class='bx bx-subdirectory-right'></i><span> 1 Business Email-id</span></li>
                         <li><i class='bx bx-subdirectory-right'></i><span> SEO Ready Website</span></li>
@@ -167,9 +170,12 @@
                 </div>
             </div>
             <div class="workcard2 wcard">
-                <span id="back">Premium</span>
+                <span id="back">
+                    <p>Intermidiate</p>
+                    <h1 id="price"><span>₹.</span>16,999<sup> +GST</sup></h1>
+
+                </span>
                 <div class="data">
-                    <h1><span>₹.</span>16,999<sup> +GST</sup></h1>
                     <ul>
                         <li><i class='bx bx-subdirectory-right'></i><span> 5 Page 1 Business Email-id</span></li>
                         <li><i class='bx bx-subdirectory-right'></i><span> SEO Ready, Unlimited Images, Videos, and Bandwidth</span></li>
@@ -196,9 +202,13 @@
                 </div>
             </div>
             <div class="workcard3 wcard">
-                <span id="back">Advance</span>
+                <span id="back">
+                    <p>Advance</p>
+
+                    <h1 id="price"><span>₹.</span>27,999<sup> +GST</sup></h1>
+
+                </span>
                 <div class="data">
-                    <h1><span>₹.</span>27,999<sup> +GST</sup></h1>
                     <ul>
                         <li><i class='bx bx-subdirectory-right'></i><span> 5 Page 1 Business Email-id</span></li>
                         <li><i class='bx bx-subdirectory-right'></i><span> SEO Ready, Unlimited Product Listings, Payment Gateway Integration
@@ -228,10 +238,11 @@
        
        <section id="contact">
         <div id="conLeft">
-            <h1>Get in touch with us.</h1>
-            <p>9am to 7pm.</p>
-            <span><i class='bx bx-envelope'></i>jsvtechflux@gmail.com</span>
-            <span><i class='bx bx-mobile'></i> +91 8777351046</span>
+            <h1>Get in touch with us. <br><span>9am</span> to<span> 7pm</span>.</h1>
+            <span id="icon"><i class='bx bx-envelope'></i>jsvtechflux@gmail.com</span>
+            <span id="icon"><i class='bx bx-mobile'></i>
+                <a href="tel:+918777351046"> +91 8777351046</a></span>
+           
         </div>
         <div id="conRight">
             <!-- <h1>Say Something</h1> -->
@@ -253,8 +264,8 @@
                 <span><a href="#" ><img src="./img/twitter.png" alt="" ></a></span>
                 <span><a href="#"><img src="./img/instagram.png" alt="" ></a></span>
                 <span><a href="#" ><img src="./img/youtube.png" alt="" id="youtube"></a></span>
+                <span><a href="https://wa.me/+918777351046"><img src="./img/whatsapp2.png" alt=""></a></span>
 
-                <span><a href="#"><img src="./img/whatsapp2.png" alt=""></a></span>
                 <span><a href="#"><img src="./img/linkdin2.png" alt="" ></a></span>
             </div>
         </div>
@@ -264,13 +275,12 @@
                 <a href="#about"><li>About Company</li></a>
                 <a href="#"><li>Our Team</li></a>
                 <a href="#"><li>Our Work</li></a>
-                <a href="#contact"><li>Contact Us</li></a>
             </ul>
             <ul>
                 <h3>Quick Links</h3>
                     <a href="#"><li>Life at JS Tech Flux</li></a>
                     <a href="#"><li>Career</li></a>
-                    <a href="#"><li>Our Work</li></a>
+                    <a href="#contact"><li>Contact Us</li></a>
             </ul>
             <ul>
                 <h3>Services</h3>
@@ -284,6 +294,7 @@
         <p id="copy">Jsv Tech Flex Pvt Ltd &copy; 2024.</p>
     </footer>
 <script src="menu.js"></script>
+<script src="search.js"></script>
 <script src="chat.js"></script>
 <script src="contactclick.js"></script>
 </body>

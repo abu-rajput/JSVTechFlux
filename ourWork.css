@@ -41,24 +41,33 @@ body{
     font-size: 2.5vw;
     color: white;
     border: 4px solid white;
+    z-index: 99;
+
     background-color:#FF8811;
     box-shadow: 0px 0px .2vw 0px black;
 }
 #fixed .message{
     width: max-content;
-    /* height: 4vw; */
+    height:4.5rem;
     display: flex;
     align-items: center;
-    gap: 1.5vw;
-    padding: 1.5rem 1rem;
+    gap: 1vw;
+    padding: 1rem 1rem;
     color:black;
     box-shadow: 0px 0px 1px 0px black;
-    animation: popup ease 3s infinite;
-    animation-delay: 3s;
-
+    position: absolute;
+    top: -100px;
     border-radius: .5rem;
     background-color: rgba(255, 255, 255, 0.214);
     backdrop-filter: blur(5px);
+    animation: popup ease 3s infinite;
+    animation-delay: 3s;
+}
+.undermessage{
+    margin-top: 150%;
+    margin-right: -200%;
+    transition: all 5s ease;
+    transform: scale(0);
 }
 #fixed .message p{
     width:fit-content;
@@ -199,10 +208,8 @@ header #serach input{
     border: none;
 
 }
-header #serach button i{
-    padding-top: .4rem;
-}
-header #serach button{
+
+header #serach #searchbtn{
     width: 40px;
     height: 40px;
     padding:.5vw .6vw ;
@@ -212,7 +219,7 @@ header #serach button{
     justify-content: center;
     align-items: center;
     /* background-color: black; */
-    color: black;
+    color: white;
     position: absolute;
     border: none;
     z-index: 100;
@@ -221,6 +228,7 @@ header #serach button{
     border-bottom-right-radius: .5vw;
     font-size: x-large;
     border-color: black;
+    background-color: black;
     top: -3px;
 
 }
@@ -357,19 +365,17 @@ header #menu #cros{
 
 #sec-1 #content{
     width: 100%;
-    height: fit-content;
+    height: calc(450px);
     position: relative;
     overflow: hidden;
     
 }
 #sec-1 #content img{
     width: 100%;
-    margin-top: 3rem;
-    height: 140%;
+    height: 130%;
     object-fit: cover;
-    filter: brightness(75%);
-    /* -webkit-transform: scaleX(-1); */
-    /* transform: scaleX(-1); */
+    position: relative;
+    filter: brightness(50%);
 }
 #sec-1 #content #data1{
     width: 65%;
@@ -381,7 +387,7 @@ header #menu #cros{
     padding:0 6vw;
     z-index: 90;
     color: black;
-    margin-top: 15vw;
+    margin-top: 7rem;
     
 
 }
@@ -556,16 +562,20 @@ main #work  .wcard{
 main #work  .wcard:hover{
     box-shadow: 0px 0px 5px 0px ;
 }
-
+.undermessage{
+    margin-top: 150%;
+    margin-right: -200%;
+    transition: all 5s ease;
+    transform: scale(0);
+} 
                                                     /* Contact */
 #contact{
     width: 100%;
-    height: 55vh;
+    max-height: 17rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     /* background-color: orange; */
-    margin-top: 3rem;
 }
 #contact #conLeft{
     width: 50%;
@@ -578,16 +588,21 @@ main #work  .wcard:hover{
 #contact #conLeft p {
     line-height: 28px;
 }
-#contact #conLeft h1{
-    font-size: 3vw;
+#contact #conLeft h1 span{
+    color: #FF8811;
 }
-#contact #conLeft span {
+#contact #conLeft #icon {
     display: flex;
+    align-items: center;
+    /* font-size: 1rem; */
     line-height: 28px;
-    /* font-size: 2vw; */
 
 }
-#contact #conLeft span .bx{
+#contact #conLeft #icon a{
+    text-decoration: none;
+    color: black;
+}
+#contact #conLeft #icon .bx{
     display: flex;
     margin-right: 2vw;
     font-size: 1.5vw;
@@ -675,12 +690,11 @@ footer #links{
 }
 footer #links ul a{
     text-decoration: none;
-    font-weight: 200;
 
     
 }
 footer #links ul a li {
-    color: white;
+    color: whitesmoke;
     margin-top: 1vw;
     list-style: none;
 }
@@ -694,6 +708,7 @@ footer  #copy{
     header{
         padding: .3rem 4vw;
     }
+    
     #fixed{
         gap: .6rem;
     }
@@ -705,11 +720,14 @@ footer  #copy{
         margin-right: .5rem;
 
     }
+    .undermessage{
+        margin-top: 150%;
+        margin-right:-170%;
+    }
     #fixed .message{
         padding:1rem;
         font-size: small;
         gap: 2.5vw;
-        margin-right: .5rem;
         padding:1rem;
     }
     #fixed #chatbox{
@@ -756,12 +774,16 @@ footer  #copy{
         padding: 0rem 4vw;
         height:fit-content;
     }
-    #sec-1 #content img{
+    #sec-1 #content{
+        max-height: 280px;
+    }
+    
+     #content img{
         width: 120%;
         height: fit-content;
         position: relative;
         object-fit: cover;
-        filter: brightness(80%);
+        filter: brightness(50%);
     }
     #sec-1 #content #data1{
         width: 78%;
@@ -890,11 +912,11 @@ footer  #copy{
     }
 
     header #serach input{
-        width:87%;
+        width:89%;
         font-size: 1rem;
 
     }
-    header #serach button i{
+    header #serach #searchbtn i{
         padding: 20% 0;
     }
     /* work */
@@ -923,6 +945,7 @@ footer  #copy{
         width: 100%;
         height: 52vh;
         margin-top: 0px;
+        margin-bottom: 6rem;
 
     }
     #contact #conLeft{
@@ -1134,11 +1157,21 @@ footer  #copy{
     header, main{
         padding: .3rem 4vw;
     }
-
+    header nav  #aboutser .sercard6 .description{
+        margin-top: 3rem;
+    }
     #sec-1 {
         width: 100%;
         height: fit-content;
    }
+   #sec-1 #content{
+    height: calc(400px);
+
+    }
+    .undermessage{
+        margin-top: 200%;
+        margin-right: -260%;
+    }
    
   
                                 /* card */
@@ -1150,7 +1183,7 @@ footer  #copy{
 
   main #contact{
     width: 100%;
-    height:23vh;
+    height:fit-content;
   }
   
   main #contact #conRight{

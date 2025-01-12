@@ -6,18 +6,18 @@
     <title>chatBot</title>
     <link rel="stylesheet" href="chatBot.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="./img/JSV TECH FLUX2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/log1.png" type="image/x-icon">
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="index.html"><img src="./img/JSV TECH FLUX2.png" alt=""></a>
+            <a href="chatBot.html"><img src="./img/JSV TECH FLUX2.png" alt=""></a>
     
         </div>
         <div id="serach">
             <form action=" ">
-                <input type="search" placeholder="Find Services">
-                <button type="submit" id=""><i class='bx bx-search'></i></button>
+                <input type="search" placeholder="Find Services" id="searchBar">
+                <div id="searchbtn"><i class='bx bx-search'></i></div>
             </form>
         </div>
         <nav >
@@ -142,12 +142,15 @@
         <h1 id="servicename">ChatBot.</h1>
         <section id="work">
             <div class="workcard1 wcard">
-                <span id="back">Basic</span>
+                <span id="back">
+                    <p>Basic</p>
+                    <h1 id="price"><span>₹.</span>5,999<sup> +GST</sup></h1>
+
+                </span>
                 <div class="data">
-                    <h1><span>₹.</span>5,999<sup> +GST</sup></h1>
                     <ul>
                         <li><i class='bx bx-subdirectory-right'></i><span>Setup of a basic conversational chatbot for simple interactions.</span></li>
-                        <li><i class='bx bx-subdirectory-right'></i><span>Pre-programmed responses for common customer queries.</span></li>
+                        <li><i class='bx bx-subdirectory-right'></i><span>PrIntermidiatee-programmed responses for common customer queries.</span></li>
                         <li><i class='bx bx-subdirectory-right'></i><span>Multi-platform support (websites, mobile apps, messaging platforms).</span></li>
                         <li><i class='bx bx-subdirectory-right'></i><span>Sentiment analysis for better engagement.</span></li>
                         <li><i class='bx bx-subdirectory-right'></i><span>2 month of free support and maintenance.</span></li>
@@ -157,9 +160,12 @@
                 </div>
             </div>
             <div class="workcard2 wcard">
-                <span id="back">Premium</span>
+                <span id="back">
+                    <p>Intermidiate</p>
+                    <h1 id="price"><span>₹.</span>10,499<sup> +GST</sup></h1>
+
+                </span>
                 <div class="data">
-                    <h1><span>₹.</span>10,499<sup> +GST</sup></h1>
                     <ul>
                         <li><i class='bx bx-subdirectory-right'></i><span>Ability to process and extract information from PDFs, documents, and structured data.</span></li>
                         <li><i class='bx bx-subdirectory-right'></i><span>Dynamic data fetching via external API  integrations.</span></li>
@@ -172,9 +178,11 @@
                 </div>
             </div>
             <div class="workcard3 wcard">
-                <span id="back">Advance</span>
+                <span id="back">
+                    <p>Advance</p>
+                    <h1 id="price"><span>₹.</span>14,999<sup> +GST</sup></h1>
+                </span>
                 <div class="data">
-                    <h1><span>₹.</span>14,999<sup> +GST</sup></h1>
                     <ul>
                         <li><i class='bx bx-subdirectory-right'></i><span>Fully customized AI chatbot solution using both open-source and proprietary tools.</span></li>
                         <li><i class='bx bx-subdirectory-right'></i><span>Integration with custom datasets (including audio, video, and text).</span></li>
@@ -194,13 +202,72 @@
             
 
         </section>
-       
+        <section class="faq">
+            <div class=" q1" id="faq">
+                <div id="heading"><h1>Why is chatbot important in website?</h1><span id="minimaiz">+</span></div>
+                
+                <p >
+                    A chatbot is an important feature for a website because it enhances user experience, improves customer engagement, and provides operational efficiency. Here are the key reasons why chatbots are valuable:
+                    <ol>
+                        <li><b>Instant Customer Support</b> : Chatbots provide immediate responses to customer queries, reducing wait times and improving user satisfaction. <ul>
+                            <li>They can operate 24/7, ensuring round-the-clock assistance.</li>
+                           </ul>
+                        </li>
+                        <li><b>Enhances User Engagement</b> : By engaging users in real-time, chatbots keep them on the website longer, increasing the chances of conversions.
+                        </li>
+                        <li>
+                            <b>Saves Time and Resources</b> : Chatbots handle repetitive questions, freeing up human agents to focus on more complex issues.
+                            <ul>
+                                <li>They reduce the need for a large customer support team, cutting costs.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Personalization</b> : Chatbots can provide tailored recommendations based on user behavior, preferences, and past interactions.
+                            <ul>
+                                <li>This personalization enhances customer satisfaction and boosts sales.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b> Increases Lead Generation</b> : Chatbots can collect valuable customer information, such as email addresses or preferences, through conversational forms.
+                            <ul>
+                                <li>They qualify leads by asking relevant questions before passing them to sales teams.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>  Multilingual Support </b> : A chatbot can be programmed to communicate in multiple languages, making it easier to serve a diverse audience.
+                            
+                        </li>
+                        <li>
+                            <b> Analytics and Insights </b> : Chatbots track user interactions and provide data on common queries and preferences, helping businesses improve their offerings.
+                            <ul>
+                                <li>They qualify leads by asking relevant questions before passing them to sales teams.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>  Reduces Bounce Rates </b> : By engaging users quickly and effectively, chatbots keep visitors on the site longer and guide them to relevant pages or products.
+                            
+                        </li>
+                        <li>
+                            <b> Competitive Advantage</b> : Offering a chatbot sets your website apart from competitors who may lack such a feature, showcasing your brand as innovative and customer-focused.
+
+                            
+                        </li>
+                    </ol>
+                </p>
+                
+            </div>
+           
+            
+           
+        </section>
        <section id="contact">
         <div id="conLeft">
-            <h1>Get in touch with us.</h1>
-            <p>9am to 7pm.</p>
-            <span><i class='bx bx-envelope'></i>jsvtechflux@gmail.com</span>
-            <span><i class='bx bx-mobile'></i> +91 8777351046</span>
+            <h1>Get in touch with us. <br><span>9am</span> to<span> 7pm</span>.</h1>
+            <span id="icon"><i class='bx bx-envelope'></i>jsvtechflux@gmail.com</span>
+            <span id="icon"><i class='bx bx-mobile'></i>
+                <a href="tel:+918777351046"> +91 8777351046</a></span>
+
+           
         </div>
         <div id="conRight">
             <!-- <h1>Say Something</h1> -->
@@ -223,7 +290,8 @@
                 <span><a href="#"><img src="./img/instagram.png" alt="" ></a></span>
                 <span><a href="#" ><img src="./img/youtube.png" alt="" id="youtube"></a></span>
 
-                <span><a href="#"><img src="./img/whatsapp2.png" alt=""></a></span>
+                <span><a href="https://wa.me/+918777351046"><img src="./img/whatsapp2.png" alt=""></a></span>
+
                 <span><a href="#"><img src="./img/linkdin2.png" alt="" ></a></span>
             </div>
         </div>
@@ -233,13 +301,13 @@
                 <a href="#about"><li>About Company</li></a>
                 <a href="#"><li>Our Team</li></a>
                 <a href="#"><li>Our Work</li></a>
-                <a href="#contact"><li>Contact Us</li></a>
             </ul>
             <ul>
                 <h3>Quick Links</h3>
                     <a href="#"><li>Life at JSV Tech Flux</li></a>
                     <a href="#"><li>Career</li></a>
-                    <a href="#"><li>Our Work</li></a>
+                    <a href="#contact"><li>Contact Us</li></a>
+
             </ul>
             <ul>
                 <h3>Services</h3>
@@ -253,6 +321,7 @@
         <p id="copy">JSV Tech Flex Pvt Ltd &copy; 2024.</p>
     </footer>
 <script src="menu.js"></script>
+<script src="search.js"></script>
 <script src="chat.js"></script>
 <script src="contactclick.js"></script>
 

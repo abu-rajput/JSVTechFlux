@@ -41,24 +41,33 @@ body{
     font-size: 2.5vw;
     color: white;
     border: 4px solid white;
+    z-index:99;
     background-color:#FF8811;
     box-shadow: 0px 0px .2vw 0px black;
 }
 #fixed .message{
     width: max-content;
-    /* height: 4vw; */
+    height:4.5rem;
     display: flex;
     align-items: center;
-    gap: 1.5vw;
-    padding: 1.5rem 1rem;
+    gap: 1vw;
+    padding: 1rem 1rem;
     color:black;
     box-shadow: 0px 0px 1px 0px black;
-    animation: popup ease 3s infinite;
-    animation-delay: 3s;
-
+    position: absolute;
+    top: -100px;
     border-radius: .5rem;
     background-color: rgba(255, 255, 255, 0.214);
     backdrop-filter: blur(5px);
+    animation: popup ease 3s infinite;
+    animation-delay: 3s;
+}
+.undermessage{
+    overflow: hidden;
+    margin-top: 150%;
+    margin-right: -200%;
+    transition: all 5s ease;
+    transform: scale(0);
 }
 #fixed .message p{
     width:fit-content;
@@ -199,10 +208,8 @@ header #serach input{
     border: none;
 
 }
-header #serach button i{
-    padding-top: .4rem;
-}
-header #serach button{
+
+header #serach #searchbtn{
     width: 40px;
     height: 40px;
     padding:.5vw .6vw ;
@@ -220,7 +227,7 @@ header #serach button{
     border-top-right-radius: .5vw;
     border-bottom-right-radius: .5vw;
     font-size: x-large;
-    border-color: black;
+    background-color:#F1EDEE;
     top: -3px;
 
 }
@@ -272,7 +279,7 @@ header nav li:hover a{
 header nav #service:hover #aboutser{
     width: 86.7%;
     z-index: -1;
-    height: 300px;
+    /* height: 300px; */
     position: absolute;
     left: 0px;
     margin: 1.7vw 6vw;
@@ -286,7 +293,8 @@ header nav #service:hover #aboutser{
 }
 header nav  #aboutser .ser a{
     width: 28.5vw;    
-    height: 11vw;
+    height: 9rem;
+    overflow: hidden;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -342,7 +350,7 @@ header #menu #cros{
 }
 #sec-1{
     width: 100%;
-    height: 80vh;
+    max-height: 80vh;
     /* background-image: url(./img/and-machines-w88uf4P6wR4-unsplash.jpg); */
     /* background-color: #04030F; */
     background-position: 20%;
@@ -356,7 +364,7 @@ header #menu #cros{
 
 #sec-1 #content{
     width: 100%;
-    height: fit-content;
+    height: calc(450px);
     position: relative;
     overflow: hidden;
     
@@ -366,7 +374,7 @@ header #menu #cros{
     margin-top: 3rem;
     height: 140%;
     object-fit: cover;
-    filter: brightness(70%);
+    filter: brightness(50%);
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
@@ -380,7 +388,7 @@ header #menu #cros{
     padding:0 6vw;
     z-index: 90;
     color: black;
-    margin-top: 15vw;
+    margin-top: 7rem;
     
 
 }
@@ -479,7 +487,7 @@ main #work{
     height: fit-content;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
+    align-items: flex-start;
     row-gap: 15px;
     justify-content: space-evenly;
     grid-column: 1rem;
@@ -498,17 +506,51 @@ main #work{
     
 }
 main #work  .wcard #back{
-    padding: .5vw 5vw;
+    width: 100%;
+    height: 9rem;
     border-radius: .2vw;
     font-size: 2vw;
     color: white;
-    background-color: #FF8811;
+    position: relative;
+    border-top-left-radius: 1.3rem ;
+    border-top-right-radius: 1.3rem;
+    background-color: transparent;
+    overflow: hidden;
+}
+main #work  .wcard #back::after{
+    position: absolute;
+    content: '';
+    width: 80%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 1.3rem ;
+    border-top-right-radius: 1.3rem;
+    background-color: #081F36;
+    transform: skew(-50deg);
+
+
+}
+main #work  .wcard #back::before{
+    position: absolute;
+    content: '';
+    width: 45%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 1.3rem ;
+    border-top-right-radius: 1.3rem;
+    background-color: #081F36;
 }
 main #work  .wcard .data{
     display: flex;
+    height: 100%;
     flex-direction: column;
     gap: 1vw;
-    margin-bottom: 2vw;
+    background-color: white;
+    padding: .5rem  0 1rem;
+    border-bottom-left-radius: 1.3rem;
+    border-bottom-right-radius: 1.3rem;
 }
 main #work  .wcard .data ul li{
     width: 90%;
@@ -531,35 +573,117 @@ main #work  .wcard .data ul li span{
     line-height: 22px;
 }
 main #work  .wcard .data h1 span,sup{
-    font-size:xx-large;
-    color: #FF8811;
+    font-size:large;
+    color: black;
 }
-main #work  .wcard .data h1{
-    font-size: 4vw;
+main #work  .wcard p{
+    z-index: 20;
+    color: white;
+    top: 1rem;
+    left: 2rem;
+    text-transform: capitalize;
+    position: absolute;
+
 }
+main #work  .wcard #price{
+    font-size: 2.7rem;
+    position: absolute;
+    right: 0px;
+    bottom: .2rem;
+    z-index: 30;
+    color: white;
+}
+main #work  .workcard1{
+    background-image: linear-gradient( #FDC484, #FD5802 );
+}
+main #work  .workcard2{
+    background-image: linear-gradient(#61B3FF, #0723DE);
+}
+main #work  .workcard3{
+    background-image: linear-gradient(#FC6739, #FDC484);
+}
+
 main #work  .wcard{
     width: 23rem;
     min-height: 23vw;
     background-color: white;
     box-shadow: 0px 0px 1px 0px;
     display: flex;
+    padding: .3rem;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    gap: 2vw;
+    border-radius: 1.5rem;
     /* animation: height linear;
     animation-timeline: view() ;
     animation-range: entry 0% cover 30%; */
-}        
+}
 main #work  .wcard:hover{
     box-shadow: 0px 0px 5px 0px ;
 }
 
+                        /* Faq */
+main .faq{
+    width: 100%;
+    min-height: 125px;
+    height: fit-content;
+    padding: .5rem 0;
+    display: flex;
+    gap: .7rem;
+    flex-direction: column;
+}
+main .faq #faq{
+    width: 100%;
+    min-height: 70px;
+    overflow: hidden;
+    padding: .7rem 1.5rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    position: relative;
+
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 2px 0px;
+
+
+}
+
+main .faq #faq #heading {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: .7rem 0;
+}
+main .faq #faq #heading span{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    position: absolute;
+    right:12px;
+    top: 15px;
+    justify-content: center;
+    align-self: center;
+    font-weight: 500;
+    font-size:1.8rem;
+    border-radius: .4rem;
+    background-color: black;
+    color: white;
+}
+main .faq #faq ol{
+    margin-left: 2rem;
+    line-height: 26px;
+}
+
+
                                                     /* Contact */
 #contact{
     width: 100%;
-    height: 55vh;
+    max-height:17rem;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -580,13 +704,21 @@ main #work  .wcard:hover{
 #contact #conLeft h1{
     font-size: 3vw;
 }
-#contact #conLeft span {
+#contact #conLeft h1 span{
+    color: #FF8811;
+}
+#contact #conLeft #icon a{
+    text-decoration: none;
+    color: black;
+}
+#contact #conLeft #icon {
     display: flex;
+    align-items: center;
     line-height: 28px;
     /* font-size: 2vw; */
 
 }
-#contact #conLeft span .bx{
+#contact #conLeft #icon .bx{
     display: flex;
     margin-right: 2vw;
     font-size: 1.5vw;
@@ -674,12 +806,11 @@ footer #links{
 }
 footer #links ul a{
     text-decoration: none;
-    font-weight: 200;
 
     
 }
 footer #links ul a li {
-    color: white;
+    color: whitesmoke;
     margin-top: 1vw;
     list-style: none;
 }
@@ -702,13 +833,13 @@ footer  #copy{
         font-size: 1.7rem;
         bottom: 3vw;
         margin-right: .5rem;
+        margin-bottom: 1rem;
 
     }
     #fixed .message{
         padding:1rem;
         font-size: small;
         gap: 2.5vw;
-        margin-right: .5rem;
         padding:1rem;
     }
     #fixed #chatbox{
@@ -754,6 +885,9 @@ footer  #copy{
         width: 100%;
         padding: 0rem 4vw;
         height:fit-content;
+    }
+    #sec-1 #content{
+        max-height: 320px;
     }
     #sec-1 #content img{
         width: 120%;
@@ -887,23 +1021,19 @@ footer  #copy{
         padding: 1.5vw;
         overflow: hidden;
     }
-
     header #serach input{
-        width:87%;
+        width:89%;
         font-size: 1rem;
 
     }
-    header #serach button i{
+    header #serach #searchbtn i{
         padding: 20% 0;
     }
     /* work */
     main #work {
         height: fit-content;
     }
-    main #work .wcard {
-        padding-bottom: 1rem;
-        
-    }
+    
     main #work .workcard2, main #work .workcard3{
         animation: height  linear;
         animation-timeline: view() ;
@@ -912,17 +1042,23 @@ footer  #copy{
     main #work .wcard #back {
         font-size: x-large;
         padding: .2rem 2rem;
-        margin-bottom: .5rem;
     }
     main #work .wcard .data h1 {
         font-size: 9vw;
     }
+    main .faq #faq{
+        height: fit-content;
+        padding: .4rem .8rem ;
+    }
+    
+
                                             /* #contact */
     #contact{
         width: 100%;
         height: 52vh;
-        margin-top: 0px;
+        margin-bottom: 6rem;
 
+        margin-top: 0px;
     }
     #contact #conLeft{
         width: 100%;
@@ -949,12 +1085,9 @@ footer  #copy{
         text-transform: capitalize;
     
     }
-
-    #contact #conLeft span .bx{
-        font-size: 5vw;
-        margin-right: 4vw;
-
-    
+    #contact #conLeft #icon .bx{
+        font-size: 1rem;
+        margin-right: .8rem;
     }
     #contact #conRight input{
         padding: 1.5vw;
@@ -1134,12 +1267,24 @@ footer  #copy{
     header, main{
         padding: .3rem 4vw;
     }
-
+    header nav  #aboutser .sercard6 .description{
+        margin-top: 3rem;
+    }
     #sec-1 {
         width: 100%;
         height: fit-content;
-   }
-   
+    }
+    #sec-1 #content{
+        height: calc(380px);
+
+    }
+    #sec-1 #content #data1 {
+        margin-top: 5.5rem;
+    }
+    .undermessage{
+        margin-top: 200%;
+        margin-right: -260%;
+    }
   
                                 /* card */
   #card{
@@ -1150,7 +1295,7 @@ footer  #copy{
 
   main #contact{
     width: 100%;
-    height:23vh;
+    height:fit-content;
   }
   
   main #contact #conRight{

@@ -2,7 +2,6 @@ let chat = document.getElementById("chat");
 let chatbox = document.getElementById("chatbox");
 let x = document.getElementsByClassName("bxs-message-alt-x")[0];
 let messageX = document.getElementById('messageExit');
-
 let mesage= document.getElementsByClassName('message')[0];
 
 chatbox.style.display="none";
@@ -39,3 +38,9 @@ function poupClose(){
      mesage.style.display="none"
 
 };
+
+
+setTimeout(function (){
+    mesage.classList.add('undermessage');
+},
+15000);

@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
 
 }
 /* animation design */
@@ -22,7 +23,6 @@
 body{
     /* background-color: rgb(252, 251, 251); */
     background-color: #F1EDEE;
-    scroll-behavior: smooth;
 }
 #fixed{
     display: flex;
@@ -43,23 +43,32 @@ body{
     border: 4px solid white;
     background-color:#FF8811;
     box-shadow: 0px 0px .2vw 0px black;
+    z-index: 99;
+
 }
 #fixed .message{
     width: max-content;
-    /* height: 4vw; */
+    height:4.5rem;
     display: flex;
     align-items: center;
-    gap: 1.5vw;
-    padding: 1.5rem 1rem;
+    gap: 1vw;
+    padding: 1rem 1rem;
     color:black;
     box-shadow: 0px 0px 1px 0px black;
-
+    position: absolute;
+    top: -100px;
     border-radius: .5rem;
     background-color: rgba(255, 255, 255, 0.214);
     backdrop-filter: blur(5px);
     animation: popup ease 3s infinite;
     animation-delay: 3s;
 }
+.undermessage{
+    margin-top: 150%;
+    margin-right: -200%;
+    transition: all 5s ease;
+    transform: scale(0);
+} 
 #fixed .message p{
     width:fit-content;
     line-height: 22px;
@@ -171,8 +180,8 @@ header{
     background-color: white;
     /* backdrop-filter: blur(5px); */
     /* background: linear-gradient(111.5deg, rgb(228, 247, 255) 21.9%, rgb(255, 216, 194) 92.2%); */
-    position:fixed;
     top:0px;
+    position: fixed;
     box-shadow: 0px 0px 4px 0px ;
     z-index: 100;
 }
@@ -188,11 +197,11 @@ header #serach{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    overflow: hidden;
     position: relative;
     overflow: hidden;
     
 }
+
 header #serach input{
     font-size: 1.1rem;
     position: relative;
@@ -202,7 +211,7 @@ header #serach input{
 
 }
 
-header #serach button{
+header #serach #searchbtn{
     width: 40px;
     height: 40px;
     padding:.5vw .6vw ;
@@ -220,7 +229,7 @@ header #serach button{
     border-top-right-radius: .5vw;
     border-bottom-right-radius: .5vw;
     font-size: x-large;
-    border-color: black;
+    background-color: #F1EDEE;
     top: -3px;
        
 }
@@ -268,7 +277,7 @@ header nav li:hover a{
 header nav #service:hover #aboutser{
     width: 86.7%;
     z-index: -1;
-    height: 300px;
+    /* max-height: 300px; */
     position: absolute;
     left: 0px;
     margin: 1.7vw 6vw;
@@ -282,8 +291,9 @@ header nav #service:hover #aboutser{
 }
 header nav  #aboutser .ser a{
     width: 28.5vw;    
-    height: 11vw;
+    height:9rem;
     display: flex;
+    overflow: hidden;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
@@ -338,24 +348,26 @@ header #menu #cros{
 
 #sec-1{
     width: 100%;
-    height:100vh;
-    /* background-image: url(./img/and-machines-w88uf4P6wR4-unsplash.jpg); */
-    /* background-color: #04030F; */
+    max-height:85vh;
     background-position: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* color: #FF8811; */
     color: #FF8811;
     justify-content: center;
 }
 
 #sec-1 #content{
+    width: 100%;
+    height: calc(450px);
+    position: relative;
     overflow: hidden;
     
 }
 #sec-1 #content img{
     width: 100%;
+    height: 130%;
+    object-fit: cover;
     position: relative;
     filter: brightness(50%);
 }
@@ -369,7 +381,7 @@ header #menu #cros{
     padding:0 6vw;
     z-index: 90;
     color: black;
-    margin-top: 15vw;
+    margin-top: 7rem;
     
 
 }
@@ -478,10 +490,7 @@ main #about{
     text-align: justify;
     line-height: 28px;
 }
-#services p{
-    line-height: 28px;
-    
-}
+
 
 @keyframes height {
     from{
@@ -506,8 +515,8 @@ main #about{
     font-weight: 500;
     text-transform: uppercase;
 }
-#about .left h1, #services h1{
-    font-size: 3vw;
+#about .left h1, #services h1,#focus #left h1 , #contact #conLeft h1 {
+    font-size: 2.6rem;
 
 }
 #about .left #cap #dobleline{
@@ -539,6 +548,8 @@ main #about{
     width: 70%;
     height: 100%;
     object-fit: cover;
+    /* -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); */
 
 }
 #about .right .backimg{
@@ -583,12 +594,18 @@ main #about{
                                                             /* services */
 #services{
     width: 100%;
+    height: fit-content;
+    max-height: 18rem;
     display: flex;
     flex-direction: column;
     gap: 1vw;
     /* align-items: center; */
     text-align: center;
     
+}
+#services p{
+    line-height: 28px;
+
 }
                                 /* card */
 #card{
@@ -680,6 +697,7 @@ main #focus{
     flex-wrap: wrap;
     /* background-color: orange; */
     /* padding: 5vw 0; */
+    margin-top: 1.5rem;
 
 
 }
@@ -774,13 +792,15 @@ main #focus{
     object-fit: cover;
 }
 
+
                                                     /* Contact */
 #contact{
     width: 100%;
-    height: 55vh;
+    max-height: 17rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
 }
 #contact #conLeft{
     width: 50%;
@@ -790,20 +810,25 @@ main #focus{
     justify-content: center;
     gap: 2vw;
 }
-#contact #conLeft span {
-    display: flex;
-    /* font-size: 1rem; */
-    line-height: 28px;
-
-}
-#contact #conLeft h1{
-    font-size: 3vw;
-}
 #contact #conLeft p{
     line-height: 28px;
 
 }
-#contact #conLeft span .bx{
+#contact #conLeft h1 span{
+    color: #FF8811;
+}
+#contact #conLeft #icon a{
+    text-decoration: none;
+    color: black;
+}
+#contact #conLeft #icon {
+    display: flex;
+    align-items: center;
+    /* font-size: 1rem; */
+    line-height: 28px;
+
+}
+#contact #conLeft #icon .bx{
     display: flex;
     margin-right: 2vw;
     font-size: 1.5vw;
@@ -817,7 +842,7 @@ main #focus{
     flex-direction: column;
     background-color: white;
     gap: 2vw;
-    padding: 4vw 2vw;
+    padding: 2vw;
     box-shadow: 0px 0px 1px 0px;
 }
 #contact #conRight input{
@@ -893,15 +918,13 @@ footer #links{
 }
 footer #links ul a{
     text-decoration: none;
-    font-weight: 200;
-    
 }
 footer #links ul h2{
     margin: 1rem 0;
 
 }
 footer #links ul a li {
-    color: white;
+    color:whitesmoke;
     margin-top: 1vw;
     list-style: none;
 
@@ -927,13 +950,18 @@ footer  #copy{
         font-size: 1.7rem;
         bottom: 3vw;
         margin-right: .5rem;
+        margin-bottom: 1rem;
 
+    }
+    .undermessage{
+        margin-top: 150%;
+        margin-right:-170%;
     }
     #fixed .message{
         padding:1rem;
         font-size: small;
         gap: 2.5vw;
-        margin-right: .5rem;
+        /* margin-right: .5%; */
         padding:1rem;
     }
     #fixed #chatbox{
@@ -972,15 +1000,19 @@ footer  #copy{
     }
     #sec-1{
         width: 100%;
-        height:fit-content;
-        margin-top: 1rem;
+        height:20rem;
+        /* margin-top: 1rem; */
     }
     main{
         width: 100%;
         padding: 0rem 4vw;
         height:auto;
     }
-    #sec-1 #content img{
+    #sec-1 #content{
+        max-height: 280px;
+    }
+    
+     #content img{
         width: 120%;
         height: fit-content;
         position: relative;
@@ -994,10 +1026,10 @@ footer  #copy{
         gap: 1rem;
         height: fit-content;
         position: absolute;
-        padding:5vw;
+        padding: 0 5vw;
         z-index: 90;
         color: black;
-        margin-top: 15vw;    
+        margin-top: 3rem;    
     }
     #sec-1 #content #data1 h1{
         font-size: 5vw;
@@ -1030,7 +1062,7 @@ footer  #copy{
     }
     #sec-1 #fixed img{
         width: 13vw;
-        height: 13vw;
+        /* height: 13vw; */
         margin-right: 1vw;
         z-index: 98;
     }
@@ -1052,7 +1084,7 @@ footer  #copy{
         width: 100%;
         height: 0px;
         position: absolute;
-        top:120%;
+        top:110%;
         left: 0;
         right: 0;
         overflow: hidden;
@@ -1118,11 +1150,11 @@ footer  #copy{
     }
 
     header #serach input{
-        width: 87%;
+        width: 89%;
         font-size: 1rem;
 
     }
-    header #serach button i{
+    header #serach #searchbtn i{
         padding: 20% 0;
     }
     #about {
@@ -1140,9 +1172,9 @@ footer  #copy{
         display: flex;
         flex-direction: column;
         gap: 3vw;
-        animation: height  linear;
+        /* animation: height  linear;
         animation-timeline: view() ;
-        animation-range: entry 0%  cover 30%;
+        animation-range: entry 0%  cover 30%; */
         /* margin-bottom: 20vw; */
     }
     
@@ -1304,7 +1336,7 @@ footer  #copy{
     #contact{
         width: 100%;
         height: 52vh;
-        margin-top: 0px;
+        margin-bottom: 6rem;
 
     }
     #contact #conLeft{
@@ -1316,6 +1348,7 @@ footer  #copy{
         animation-range: entry 0%  cover 30%;
         
     }
+    
     #contact #conRight{
         width: 100%;
         /* height: 40vh; */
@@ -1329,13 +1362,11 @@ footer  #copy{
         text-transform: capitalize;
     
     }
-
-    #contact #conLeft span .bx{
-        font-size: 5vw;
-        margin-right: 4vw;
-
-    
+    #contact #conLeft #icon .bx{
+        font-size: 1rem;
+        margin-right: .8rem;
     }
+    
     #contact #conRight input{
         padding: 1.5vw;
         margin-bottom: 3vw;
@@ -1435,8 +1466,66 @@ footer  #copy{
     header #menu{
         display: block;
     }
-    header nav{
+    header {
+        padding: .5rem 4vw;
+        justify-content: space-between;
+    }
+   
+    header nav #navbar{
+        width: 100%;
+        height: 0px;
+        position: absolute;
+        top:110%;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        flex-direction: column;
+        background-color: white;
+        /* border-top: 1px solid black; */
+        background-color: white ;
+        backdrop-filter: blur(15px);
+        transition: height 1s linear;
+    }
+    header #navbar li {
+        width: fit-content;
+        padding: 20px;
+
+    }
+    header nav ul li a{
+        /* width: 100%; */
+        padding: 20px;
+    
+    }
+    header nav #service{
+        position: relative;
+    }
+    header nav #service:hover #aboutser {
+        width: 200%;
+        height: fit-content;
+        flex-direction: column;
+        top: -200%;
+        left: 95%;
+        position: absolute;
+    }
+    header nav ul li #aboutser .ser {
+        width: 100%;
+    }
+    header nav #service:hover .ser {
+        background-color: transparent;
+    }
+    header nav #service:hover i{
+        transform: rotate(0deg);
+    }
+    header nav ul li #aboutser .ser .icon, header nav ul li #aboutser .ser p{
         display: none;
+
+    }
+    header nav #aboutser .ser a{
+        width: 100%;
+        height: auto;
+        border: none;
+        text-align: left;
+        font-size: large;
     }
     #sec-1 #content #data1 h1,#sec-1 #content #data1 h1 span{
         font-size:5vw;
@@ -1492,8 +1581,9 @@ footer  #copy{
         border-end-start-radius: 0;
         
     }
-   
-    
+    /* #services p {
+        font-size: small;
+    }     */
                         /* card */
     #card{
         width: 100%;
@@ -1559,11 +1649,22 @@ footer  #copy{
     header, main{
         padding: .3rem 4vw;
     }
+    header nav  #aboutser .sercard6 .description{
+        margin-top: 3rem;
+    }
        /* about */
     #sec-1 {
         width: 100%;
         height: fit-content;
-   }
+    }
+    #sec-1 #content{
+        height: calc(400px);
+
+    }
+    .undermessage{
+        margin-top: 200%;
+        margin-right: -260%;
+    }
     
   
                                 /* card */
@@ -1571,6 +1672,7 @@ footer  #copy{
     width: 100%;
     height: fit-content;
   }
+
                             /* Focus */
   main #focus{
     width: 100%;
@@ -1592,7 +1694,7 @@ footer  #copy{
 
   main #contact{
     width: 100%;
-    height:23vh;
+    height:fit-content;
   }
   
   main #contact #conRight{

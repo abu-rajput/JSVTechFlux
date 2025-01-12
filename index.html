@@ -6,19 +6,20 @@
     <title>JSV Tech Flux</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="./img/JSV LOGO 2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/log1.png" type="image/x-icon">
 </head>
 <body>
-    <header>
+    <header class="headar">
         <div class="logo">
     
             <a href="index.html"><img src="./img/JSV TECH FLUX2.png" alt=""></a>
         </div>
         <div id="serach">
             <form action=" ">
-                <input type="search" placeholder="Find Services">
-                <button type="submit" id=""><i class='bx bx-search'></i></button>
+                <input type="search" placeholder="Find Services" id="searchBar">
+                <div id="searchbtn"><i class='bx bx-search'></i></div>
             </form>
+
         </div>
         <nav >
             <ul id="navbar">
@@ -100,7 +101,6 @@
     </header>
     <section id="sec-1">
         <div id="content">
-            
             <div id="data1">
                 <h1>Boost Business with <span>Creative</span> Idea & <br>Brand Solutions with us.</h1>
                 <p>We engineer purpose-driven, customer centric outcomes for a global clientele of startups and enterprises, empowering them to grow into true-technology enabled leaders.</p>
@@ -147,7 +147,8 @@
             </div>
             <div class="right">
                 
-                <img src="./img/developer.png" alt="">
+                <!-- <img src="./img/about2.png" alt=""> -->
+                <img src="./img/about 3d.png" alt="">
 
             </div>
 
@@ -297,10 +298,10 @@
         </section>
        <section id="contact">
         <div id="conLeft">
-            <h1>Get in touch with us.</h1>
-            <p>9am to 7pm.</p>
-            <span><i class='bx bx-envelope'></i>jsvtechflux@gmail.com</span>
-            <span><i class='bx bx-mobile'></i> +91 8777351046</span>
+            <h1>Get in touch with us. <br><span>9am</span> to<span> 7pm</span>.</h1>
+            <span id="icon"><i class='bx bx-envelope'></i>jsvtechflux@gmail.com</span>
+            <span id="icon"><i class='bx bx-mobile'></i>
+                <a href="tel:+918777351046"> +91 8777351046</a></span>
            
         </div>
         <div id="conRight">
@@ -323,7 +324,7 @@
                 <span><a href="#"><img src="./img/instagram.png" alt="" ></a></span>
                 <span><a href="#" ><img src="./img/youtube.png" alt="" id="youtube"></a></span>
 
-                <span><a href="#"><img src="./img/whatsapp2.png" alt=""></a></span>
+                <span><a href="https://wa.me/+918777351046"><img src="./img/whatsapp2.png" alt=""></a></span>
                 <span><a href="#"><img src="./img/linkdin2.png" alt="" ></a></span>
             </div>
         </div>
@@ -332,13 +333,15 @@
             <h3>Explore</h3>
                 <a href="#about"><li>About Company</li></a>
                 <a href="#"><li>Our Team</li></a>
-                <a href="#contact"><li>Contact Us</li></a>
+                <a href="#"><li>Our Work</li></a>
+
             </ul>
             <ul>
                 <h3>Quick Links</h3>
                     <a href="#"><li>Life at JSV Tech Flux</li></a>
                     <a href="#"><li>Career</li></a>
-                    <a href="#"><li>Our Work</li></a>
+                    <a href="#contact"><li>Contact Us</li></a>
+
             </ul>
             <ul>
                 <h3>Services</h3>
@@ -353,6 +356,7 @@
 
     </footer>
 <script src="menu.js"></script>
+<script src="search.js"></script>
 <script src="chat.js"></script>
 <script src="contactclick.js"></script>
 
