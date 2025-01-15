@@ -8,7 +8,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="./img/log1.png" type="image/x-icon">
 </head>
-<body>
+<body onload="start()">
     <header>
         <div class="logo">
             <a href="chatBot.html"><img src="./img/JSV TECH FLUX2.png" alt=""></a>
@@ -122,16 +122,12 @@
                 <div id="head">
                     <div id="profile"><img src="./img/developer.png" alt=""></div>
                     <i class='bx bxs-message-alt-x'></i>
-
                 </div>
-                <div id="chatproces">
-                    <div id="bottom">
-                        <form action="">
-                        <input type="text" placeholder="Message..">
-                        <button type="submit"><i class='bx bxs-send'></i>
-                        </button>
-                    </form>
-                    </div>
+                <div id="chatproces"> </div>
+                <div id="bottom">
+                    <input type="text" placeholder="Message.." class="text">
+                    <button type="submit" class="sendbtn">send<i class='bx bxs-send'></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -203,10 +199,12 @@
 
         </section>
         <section class="faq">
-            <div class=" q1" id="faq">
-                <div id="heading"><h1>Why is chatbot important in website?</h1><span id="minimaiz">+</span></div>
-                
-                <p >
+            <div class="accordian" >
+                <div class="question">
+                    <h3>Why is chatbot important in website?</h3>                    
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
                     A chatbot is an important feature for a website because it enhances user experience, improves customer engagement, and provides operational efficiency. Here are the key reasons why chatbots are valuable:
                     <ol>
                         <li><b>Instant Customer Support</b> : Chatbots provide immediate responses to customer queries, reducing wait times and improving user satisfaction. <ul>
@@ -253,10 +251,84 @@
                             
                         </li>
                     </ol>
-                </p>
+                </div>
                 
             </div>
-           
+            <div class="accordian">
+                <div class="question">
+                    <h3>What is a chatbot, and how can it help my business?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    A chatbot is an AI-powered tool that interacts with users in real-time, answering queries, providing support, and enhancing customer engagement. It saves time, improves efficiency, and boosts customer satisfaction.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Can a chatbot be integrated into my website or app?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Yes, we can integrate chatbots seamlessly into your website, mobile app, or even messaging platforms like WhatsApp, Facebook Messenger, and more.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Are chatbots customizable?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Absolutely! Our chatbots can be customized to match your brand’s tone, style, and specific requirements, whether for sales, support, or other purposes.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Do chatbots support multiple languages?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Yes, we can develop multilingual chatbots to cater to a diverse customer base, ensuring inclusivity and better communication.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Can chatbots handle complex queries?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Yes, our AI-powered chatbots use natural language processing (NLP) to understand and respond effectively to both simple and complex queries.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Is it expensive to implement a chatbot?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Not at all! We offer scalable chatbot solutions that fit different budgets, ensuring excellent ROI for your business.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Will a chatbot work 24/7?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Yes, chatbots operate around the clock, providing uninterrupted support to your customers.
+
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3> Do chatbots collect user data securely?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Yes, our chatbots comply with data privacy standards, ensuring secure and ethical handling of user information.
+
+                </div>
+            </div>
+            
             
            
         </section>
@@ -323,6 +395,8 @@
 <script src="menu.js"></script>
 <script src="search.js"></script>
 <script src="chat.js"></script>
+<script src="faq.js"></script>
+<script src="App.js"></script>
 <script src="contactclick.js"></script>
 
 </body>

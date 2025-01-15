@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="./img/log1.png" type="image/x-icon">
 
 </head>
-<body>
+<body onload="start()">
     <header>
         <div class="logo">
             <a href="digitalMarketing.html"><img src="./img/JSV TECH FLUX2.png" alt=""></a>
@@ -123,16 +123,12 @@
                 <div id="head">
                     <div id="profile"><img src="./img/developer.png" alt=""></div>
                     <i class='bx bxs-message-alt-x'></i>
-
                 </div>
-                <div id="chatproces">
-                    <div id="bottom">
-                        <form action="">
-                        <input type="text" placeholder="Message..">
-                        <button type="submit"><i class='bx bxs-send'></i>
-                        </button>
-                    </form>
-                    </div>
+                <div id="chatproces"> </div>
+                <div id="bottom">
+                    <input type="text" placeholder="Message.." class="text">
+                    <button type="submit" class="sendbtn">send<i class='bx bxs-send'></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -216,10 +212,12 @@
 
         </section>
         <section class="faq">
-            <div class=" q1" id="faq">
-                <div id="heading"><h1>What is Digital Marketing?</h1><span id="minimaiz">+</span></div>
-                
-                <p >
+            <div class="accordian" >
+                <div class="question">
+                    <h3>What is Digital Marketing?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
                     Digital marketing refers to promoting products, services, or brands using digital technologies and online platforms. It involves strategies and tools to reach, engage, and convert potential customers through the internet and electronic devices.
                     <ol>
                         <li><b>Online Focus</b> :Utilizes the internet and digital devices (smartphones, computers, tablets) for communication.</li>
@@ -235,10 +233,94 @@
                             <b>Data-Driven: </b> : Provides analytics and insights to measure the effectiveness of campaigns.
                         </li>
                     </ol>
-                </p>
+                </div>
                 
             </div>
-           
+            <div class="accordian">
+                <div class="question">
+                    <h3>What is digital marketing, and why is it important?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Digital marketing involves promoting your business online through channels like social media, SEO, email, and ads. It helps you reach a broader audience, drive traffic, and boost sales.
+                    
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Which digital marketing services do you offer?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    We offer SEO, social media marketing, content marketing, PPC (Pay-Per-Click) advertising, email marketing, and more to help grow your online presence.
+     
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>How long does it take to see results from digital marketing?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Results vary depending on the strategy. SEO may take 3-6 months, while PPC and social media ads can show immediate results.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>What is the role of social media in digital marketing?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Social media is essential for building brand awareness, engaging with your audience, and driving traffic to your website or store.
+                    
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>What is PPC, and how does it work?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    PPC (Pay-Per-Click) is an advertising model where you pay only when someone clicks on your ad. It’s a cost-effective way to drive targeted traffic.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>How do you measure the success of a digital marketing campaign?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    We track metrics like website traffic, conversion rates, engagement levels, ROI, and more to evaluate the effectiveness of our campaigns.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Can digital marketing help local businesses?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Absolutely! Local SEO, Google My Business optimization, and targeted ads can help local businesses attract customers in their area.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Do you provide content creation services?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Yes, we create high-quality content, including blog posts, social media updates, videos, and more, tailored to your audience.
+
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Are your digital marketing strategies customizable?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Yes, we design campaigns based on your business goals, target audience, and industry trends for maximum results.
+                </div>
+            </div>
             
            
         </section>
@@ -302,6 +384,8 @@
 <script src="menu.js"></script>
 <script src="search.js"></script>
 <script src="chat.js"></script>
+<script src="faq.js"></script>
+<script src="App.js"></script>
 <script src="contactclick.js"></script>
 
 </body>

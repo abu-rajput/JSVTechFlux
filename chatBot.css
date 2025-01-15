@@ -9,7 +9,10 @@
     /* font-family: "Kaushan Script", cursive; */
 
 }
-
+::-webkit-scrollbar{
+    width: 0;
+    scroll-behavior: smooth;
+}
 main #servicename{
     /* font-family: "Ga Maamli", serif; */
     /* font-family: "Kaushan Script", cursive; */
@@ -85,23 +88,43 @@ body{
     }
     
 }
+                            /* chatbox design */
 #fixed #chatbox{
     width: 325px;
     height: 450px;
     bottom: 0px;
     right: 0px;
-    /* background-color: rgb(244, 242, 242); */
+    display: none;
+    flex-direction: column;
+    background-color:white;
     border-radius: 1.5vw;
-    overflow: hidden;
-    position: relative;
-    background-color: #FF8811;
+    bottom: 0;
+}
 
+.mesLeft, .reqRight{
+    width: 70%;
+    font-size: 1rem;
+    color: black;
+    word-wrap: break-word;
+    border-radius: 0 .7rem .7rem;
+    padding: .3rem .5rem ;
+    background-color:whitesmoke;
+    display: inline-block;
+    box-shadow:0 0 .5px 0 ;
+    margin: .2rem 0;
+}
+.reqRight{
+    border-radius: .7rem 0 .7rem .7rem;
+    float: right;
 }
 #fixed #chatbox #head{ 
     width: 100%;
     display: flex;
+    border-radius: 1.2rem 1.2rem 0 0;
+    background-color: #FF8811;
     justify-content: space-between;
     padding: .7vw;
+    
 
 }
 #fixed #chatbox #profile{
@@ -113,54 +136,55 @@ body{
 }
 #fixed #chatbox #chatproces{
     width: 100%;
-    height: 375px;
-    /* overflow: scroll; */
-    background-color:rgb(255, 255, 255);
-    border-radius: 1vw;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0px 0px 1.5px 0px black;
+    height: 72%;
+    overflow-Y: scroll;
+    /* background-color:rgb(255, 255, 255); */
+    background-color: white;
+    border-radius: 1rem 1rem 0 0;
     padding: .7vw;
-
 }
-#fixed #chatbox #chatproces #bottom form{
-    width: 96%;
-    height: 3.7vw;
-    bottom: 5px;
-    align-self: center;
-    position: absolute;
-    border: 2px solid black;
-    border-radius: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* background-color: rgba(255, 255, 255, 0.214); */
-    /* backdrop-filter: blur(5px); */
-    padding: 0 .3rem;
 
+#fixed #chatbox  #bottom{
+    height: 8%;
+    border: 1px solid black;
+    border-radius:.9rem;
+    min-height: 42px;
+    margin: 0rem .5rem;
+    display:grid;
+    border: solid 1px #777;
+    grid-template-columns: 70% 30%;
+    background-image: linear-gradient(white 50%, #FF8811 30%);
 }
-#fixed #chatbox #chatproces #bottom input{
-    width: 80%;
+
+#fixed #chatbox #bottom input{
     font-size: 1.2rem;
-    outline: 0;
-    padding-left: .5rem ;
-    border: 0;
+    padding-left: .5rem;
+    outline: none;
+    border: none;
+    border-right:none ;
+    background-color: white;
+    border: solid 1px white;
+
+    border-radius: .8rem  0 .8rem  .8rem;
+
 }
-#fixed #chatbox #chatproces #bottom button{
-    width: 40px;
-    height: 40px;
-    padding: .3rem;
-    border-radius: 50%;
+#fixed #chatbox #bottom button{
     background-color: #FF8811;
     color: white;
     outline: none;
+    font-size: 1.2rem;
+    border-radius:.8rem;
     border: none;
     
-
 }
-#fixed #chatbox #chatproces #bottom i{
-    font-size:1.5rem;
+#fixed #chatbox #bottom button:active{
+    font-size: 1rem;
+}
+#fixed #chatbox #bottom button i:active{
+    font-size: 1rem;
+}
+#fixed #chatbox  #bottom i{
+    font-size:1.2rem;
     margin-left: .2rem;
     transform: rotate(-40deg);
 
@@ -628,7 +652,7 @@ main #work  .wcard:hover{
     box-shadow: 0px 0px 5px 0px ;
 }
 
-                    /* Faq */
+                                /* Faq */
 main .faq{
     width: 100%;
     min-height: 125px;
@@ -638,55 +662,47 @@ main .faq{
     gap: .7rem;
     flex-direction: column;
 }
-main .faq #faq{
+main .faq .accordian{
     width: 100%;
-    min-height: 70px;
-    overflow: hidden;
-    padding: 1.5rem 1.5rem;
-    border-radius: .5rem;
     display: flex;
+    gap: .7rem;
     flex-direction: column;
-    gap: .8rem;
-    position: relative;
-
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    box-shadow: 0px 0px 0px .2px;
     background-color: white;
-    color: black;
-    box-shadow: 0px 0px 2px 0px;
-
-
 }
-
-main .faq #faq #heading {
-    width: 90%;
-    height: 100%;
+main .faq .accordian .question{
     display: flex;
     justify-content: space-between;
-    margin-bottom: .7rem;
+    align-items: center;
+
+
 }
-main .faq #faq #heading span{
-    width: 35px;
-    height: 35px;
+main .faq .accordian .question .minimaiz{
+    font-size: 1.8rem;
+    color: black;
+    padding: .1rem .7rem;
+    transform: rotate(90deg);
+    border-radius: .5rem;
+}
+main .faq .accordian .question .minimaiz.active{
+    transform: rotate(270deg);
+}
+main .faq .accordian .answer{
     display: flex;
-    position: absolute;
-    right:12px;
-    top: 15px;
-    justify-content: center;
-    align-self: center;
-    font-weight: 500;
-    font-size:1.8rem;
-    border-radius: .4rem;
-    background-color: black;
-    color: white;
+    flex-direction: column;
+    gap: .7rem;
+    max-height: 0;
+    overflow: hidden;
 }
-main .faq #faq ol{
+main .faq .accordian .answer.active{
+    max-height: fit-content;
+}
+main .faq .accordian .answer ol{
     margin-left: 2rem;
-    line-height: 26px;
+    line-height: 1.7rem;
 }
-main .faq #faq ol li ul{
-    margin-left: 2rem;
-
-}
-
 
                                                     /* Contact */
 #contact{
@@ -855,12 +871,12 @@ footer  #copy{
         /* margin-right: .5rem; */
         padding:1rem;
     }
-    #fixed #chatbox{
-        width: 300px;
-        border-radius: 5vw;
+                         /* chatbox design */
+     #fixed #chatbox{
+        width: 320px;
+        border-radius: 1.2rem;
     }
     #fixed #chatbox #head{ 
-        padding: 1rem;
         padding: .6rem;
     }
     #fixed #chatbox #profile{
@@ -869,26 +885,10 @@ footer  #copy{
         overflow: hidden;
         border-radius: 50%;
     }
-    #fixed #chatbox #chatproces{
-        height: 375px;
+    #fixed #chatbox #chatproces {
+        padding: .6rem .5rem ;
     }
-    #fixed #chatbox #chatproces #bottom{
-        width: 100%;
-        margin-left: .3rem;
-    }
-    #fixed #chatbox #chatproces #bottom form{
-        width: 96%;
-        height: 12vw;
-        padding: 0 .3rem;
-    }
-    #fixed #chatbox #chatproces #bottom button{
-        width: 9vw;
-        height: 9vw;
-    }
-    #fixed #chatbox #chatproces #bottom i{
-        /* font-size: 1rem; */
-        margin-left: .1rem;
-    }
+
     #sec-1{
         width: 100%;
         height:fit-content;

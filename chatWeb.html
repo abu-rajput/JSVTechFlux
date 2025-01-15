@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="./img/log1.png" type="image/x-icon">
 
 </head>
-<body>
+<body onload="start()">
     <header>
         <div class="logo">
             <a href="chatWeb.html"><img src="./img/JSV TECH FLUX2.png" alt=""></a>
@@ -123,16 +123,12 @@
                 <div id="head">
                     <div id="profile"><img src="./img/developer.png" alt=""></div>
                     <i class='bx bxs-message-alt-x'></i>
-
                 </div>
-                <div id="chatproces">
-                    <div id="bottom">
-                        <form action="">
-                        <input type="text" placeholder="Message..">
-                        <button type="submit"><i class='bx bxs-send'></i>
-                        </button>
-                    </form>
-                    </div>
+                <div id="chatproces"> </div>
+                <div id="bottom">
+                    <input type="text" placeholder="Message.." class="text">
+                    <button type="submit" class="sendbtn">send<i class='bx bxs-send'></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -235,7 +231,84 @@
             
 
         </section>
-       
+        <section class="faq">
+            <div class="accordian">
+                <div class="question">
+                    <h3>Why should I choose chatbot and website bundle services together? </h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    A chatbot and website bundle offers seamless integration between your website and AI-powered customer support. This improves user engagement, reduces response time, and enhances customer experience, all in one cost-effective package.
+
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>How do chatbots complement websites?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">  
+                    Chatbots handle real-time customer queries, guide users through your website, and assist in conversions, ensuring your website becomes a 24/7 interactive platform.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>What are the benefits of taking the bundle over separate services?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    The bundle offers better integration, a consistent design, and a more affordable pricing structure compared to purchasing these services separately.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Is the chatbot customizable for my business?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Yes, our chatbots are tailored to match your website design, brand tone, and specific needs, ensuring a seamless user experience.
+
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Will the bundled service save me money?
+                    </h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Absolutely! Bundled services reduce overall costs while providing a cohesive and well-integrated solution for your digital presence.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Why choose JSV Tech Flux for chatbot and website services?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    We offer an all-in-one solution with expert integration, cutting-edge technology, and a customer-focused approach to meet your business goals.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Will the chatbot work across multiple platforms?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Yes, our chatbots are designed to work on your website and can also be integrated with platforms like WhatsApp, Facebook Messenger, and more.
+
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3> Do you provide support after delivery?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Yes, we offer ongoing maintenance and support to ensure your website and chatbot operate smoothly.
+                </div>
+            </div>
+        </section>
        <section id="contact">
         <div id="conLeft">
             <h1>Get in touch with us. <br><span>9am</span> to<span> 7pm</span>.</h1>
@@ -296,6 +369,8 @@
 <script src="menu.js"></script>
 <script src="search.js"></script>
 <script src="chat.js"></script>
+<script src="faq.js"></script>
+<script src="App.js"></script>
 <script src="contactclick.js"></script>
 </body>
 </html>

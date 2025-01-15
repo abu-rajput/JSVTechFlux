@@ -8,7 +8,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="./img/log1.png" type="image/x-icon">
 </head>
-<body>
+<body onload="start()">
     <header>
         <div class="logo">
             <a href="ourWork.html"><img src="./img/JSV TECH FLUX2.png" alt=""></a>
@@ -124,16 +124,12 @@
                 <div id="head">
                     <div id="profile"><img src="./img/developer.png" alt=""></div>
                     <i class='bx bxs-message-alt-x'></i>
-
                 </div>
-                <div id="chatproces">
-                    <div id="bottom">
-                        <form action="">
-                        <input type="text" placeholder="Message..">
-                        <button type="submit"><i class='bx bxs-send'></i>
-                        </button>
-                    </form>
-                    </div>
+                <div id="chatproces"> </div>
+                <div id="bottom">
+                    <input type="text" placeholder="Message.." class="text">
+                    <button type="submit" class="sendbtn">send<i class='bx bxs-send'></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -213,6 +209,7 @@
 <script src="menu.js"></script>
 <script src="search.js"></script>
 <script src="chat.js"></script>
+<script src="App.js"></script>
 <script src="contactclick.js"></script>
 
 </body>

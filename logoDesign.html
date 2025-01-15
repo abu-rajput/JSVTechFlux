@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="./img/log1.png" type="image/x-icon">
 
 </head>
-<body>
+<body onload="start()">
     <header>
         <div class="logo">
             <a href="logoDesign.html"><img src="./img/JSV TECH FLUX2.png" alt=""></a>
@@ -123,16 +123,12 @@
                 <div id="head">
                     <div id="profile"><img src="./img/developer.png" alt=""></div>
                     <i class='bx bxs-message-alt-x'></i>
-
                 </div>
-                <div id="chatproces">
-                    <div id="bottom">
-                        <form action="">
-                        <input type="text" placeholder="Message..">
-                        <button type="submit"><i class='bx bxs-send'></i>
-                        </button>
-                    </form>
-                    </div>
+                <div id="chatproces"> </div>
+                <div id="bottom">
+                    <input type="text" placeholder="Message.." class="text">
+                    <button type="submit" class="sendbtn">send<i class='bx bxs-send'></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -214,12 +210,21 @@
             <div class="box b10" >
                 <img src="./img/infinity.jpg" alt="">
             </div>
+            <div class="box b10" >
+                <img src="./img/jsv blue.jpg" alt="">
+            </div>
+            <div class="box b10" >
+                <img src="./img/sample logo 3d.png" alt="">
+            </div>
             
         </section>
         <section class="faq">
-            <div class="q2" id="faq">
-                <div id="heading"><h1>Why is a logo important?</h1><span id="minimaiz">+</span></div>
-                <p>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Why is a logo important?</h3>
+                    <span><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
                     Having a good logo is very important if you want to professionally represent your company or brand. A logo is the face of your brand and creates the first impression for your customers.
                     <h3>Benefits of having a good logo:</h3>
                     <ol>
@@ -229,8 +234,93 @@
                         <li><b>Trust Building </b>: Establishes trust with your clients and customers.</li>
                         <li> <b>Marketing Advantage </b>:Looks impactful on websites, business cards, brochures, and advertisements.</li>
                     </ol>
-                </p>
+                </div>
             </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Why is a logo important for a business?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    A logo represents your brand, builds recognition, and creates trust among customers, helping your business stand out.  
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Can a logo impact my website’s SEO?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Yes, an optimized logo with proper file naming and alt text can improve website speed and visibility, boosting SEO.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Should my logo be unique?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Absolutely! A unique logo sets your brand apart and leaves a lasting impression on your audience.  
+
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Why choose JSV Tech Flux for logo design?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    At JSV Tech Flux, we create unique, impactful, and professional logos tailored to your brand’s identity, ensuring it stands out in the market.  
+
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>How long does it take to design a logo with JSV Tech Flux?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    We typically deliver initial logo concepts within 3-5 business days, depending on the project requirements.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Can I request revisions to my logo design?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Yes, we offer multiple revision rounds to ensure your logo perfectly aligns with your vision and brand.  
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>What file formats will I receive for my logo?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    You will receive your logo in all standard formats, including PNG, JPEG, SVG, and PDF, ensuring compatibility across all platforms.  
+
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Do you provide custom logo designs or use templates?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    We specialize in custom logo designs, ensuring every creation is unique and tailored specifically to your brand.  
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Will my logo be scalable for all uses?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Yes, our designs are created in vector format, ensuring your logo looks perfect on everything from business cards to billboards.  
+                </div>
+            </div>
+            
         </section>
        <section id="contact">
         <div id="conLeft">
@@ -294,6 +384,8 @@
 <script src="menu.js"></script>
 <script src="search.js"></script>
 <script src="chat.js"></script>
+<script src="faq.js"></script>
+<script src="App.js"></script>
 <script src="contactclick.js"></script>
 
 </body>

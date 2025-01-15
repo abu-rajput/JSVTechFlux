@@ -8,7 +8,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="./img/log1.png" type="image/x-icon">
 </head>
-<body>
+<body onload="start()">
     <header>
         <div class="logo">
             <a href="webDesign.html"><img src="./img/JSV TECH FLUX2.png" alt=""></a>
@@ -122,16 +122,12 @@
                 <div id="head">
                     <div id="profile"><img src="./img/developer.png" alt=""></div>
                     <i class='bx bxs-message-alt-x'></i>
-
                 </div>
-                <div id="chatproces">
-                    <div id="bottom">
-                        <form action="">
-                        <input type="text" placeholder="Message..">
-                        <button type="submit"><i class='bx bxs-send'></i>
-                        </button>
-                    </form>
-                    </div>
+                <div id="chatproces"> </div>
+                <div id="bottom">
+                    <input type="text" placeholder="Message.." class="text">
+                    <button type="submit" class="sendbtn">send<i class='bx bxs-send'></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -206,10 +202,12 @@
 
         </section> 
         <section class="faq">
-            <div class=" q1" id="faq">
-                <div id="heading"><h1>Why is a website important?</h1><span id="minimaiz">+</span></div>
-                
-                <p >
+            <div class="accordian">
+                <div class="question">
+                    <h3>Why is a website important?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
                     A website is important because it serves as a digital storefront for your business, providing a platform to showcase your products, services, and brand identity. It allows you to:
                     <ol>
                         <li><b>Reach a Global Audience</b> : A website makes your business accessible to anyone, anywhere, 24/7.</li>
@@ -225,17 +223,86 @@
                             <b>Stay Competitive</b> : In today’s digital age, having a website is crucial for staying relevant and competing effectively in the market.
                         </li>
                     </ol>
-                </p>
-                
+                </div>                
             </div>
-           
+            <div class="accordian">
+                <div class="question">
+                    <h3>Why is a website important for my business?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    A website serves as your digital storefront, helping you showcase your products or services, reach a wider audience, and establish credibility.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>How long does it take to build a website?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Absolutely! We tailor our SEO strategies to meet your business goals, industry needs, and target audience.            
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Will my website be mobile-friendly?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Yes, all our websites are designed to be fully responsive, ensuring a seamless experience across all devices.
             
-           
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Can you redesign my existing website?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Absolutely! We specialize in modernizing outdated websites with improved designs, better functionality, and enhanced performance.
+            
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Do you provide e-commerce solutions?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Yes, we design and develop user-friendly e-commerce websites with secure payment gateways, inventory management, and other essential features.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Will my website be optimized for SEO?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Yes, we implement SEO best practices to ensure your website ranks higher on search engines and attracts organic traffic.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Do you offer maintenance and support after the website launch?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Yes, we provide ongoing maintenance and support to keep your website updated, secure, and running smoothly.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>What technologies do you use for website development?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    We work with the latest technologies, including HTML5, CSS3, JavaScript, PHP, WordPress, and more, depending on your project’s needs.
+                </div>
+            </div>
         </section>
        <section id="contact">
         <div id="conLeft">
             <h1>Get in touch with us. <br><span>9am</span> to<span> 7pm</span>.</h1>
-
             <span id="icon"><i class='bx bx-envelope'></i>jsvtechflux@gmail.com</span>
             <span id="icon"><i class='bx bx-mobile'></i>
                 <a href="tel:+918777351046"> +91 8777351046</a></span>
@@ -247,7 +314,6 @@
                 <input type="email" placeholder="YOUR E-MAIL_">
                 <textarea name=""  rows="10" id="message" placeholder="MESSAGE_"></textarea >
                 <button>SEND</button>
-
             </form>
         </div>
        </section>
@@ -260,8 +326,7 @@
             <div id="social">
                 <span><a href="#" ><img src="./img/twitter.png" alt="" ></a></span>
                 <span><a href="#"><img src="./img/instagram.png" alt="" ></a></span>
-                <span><a href="#" ><img src="./img/youtube.png" alt="" id="youtube"></a></span>
-
+                <span><a href="#"><img src="./img/youtube.png" alt="" id="youtube"></a></span>
                 <span><a href="https://wa.me/+918777351046"><img src="./img/whatsapp2.png" alt=""></a></span>
                 <span><a href="#"><img src="./img/linkdin2.png" alt="" ></a></span>
             </div>
@@ -291,9 +356,11 @@
         <hr>
         <p id="copy">JSV Tech Flex Pvt Ltd &copy; 2024.</p>
     </footer>
-<script src="menu.js"></script>
-<script src="search.js"></script>
-<script src="chat.js"></script>
-<script src="contactclick.js"></script>
+    <script src="menu.js"></script>
+    <script src="search.js"></script>
+    <script src="chat.js"></script>
+    <script src="faq.js"></script>
+    <script src="App.js"></script>
+    <script src="contactclick.js"></script>
 </body>
 </html>

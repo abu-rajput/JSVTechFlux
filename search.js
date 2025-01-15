@@ -9,8 +9,22 @@ const linksData =[
     {title:"website price", url:"webDesign.html", content:""},
     { title: "Website design", url: "webDesign.html", content: "" },
 
-    {title:"logo design", url:"#card4", content:""},
+    {title:"digitalmarketing", url:"#card2", content:""},
+    {title:"digital marketing price", url:"digitalMarketing.html", content:""},
+    {title:"digitalmarketing price", url:"digitalMarketing.html", content:""},
+
+    {title:"chatbot design", url:"#card3", content:""},
+    {title:"chatbot price", url:"chatBot.html", content:""},
+
+    {title:"seo", url:"#card4", content:""},
+    {title:"seo price", url:"seo.html", content:""},
+
+    {title:"logo design", url:"#card5", content:""},
     {title:"Logo price", url:"logoDesign.html", content:""},
+    
+    
+    
+    
 
     { title: "website development", url: "webDesign.html", content: ""},
     { title: "Contact", url: "#contact", content: ""}

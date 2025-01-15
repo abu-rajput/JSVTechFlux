@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="./img/log1.png" type="image/x-icon">
 
 </head>
-<body>
+<body onload="start()">
     <header>
         <div class="logo">
             <a href="seo.html"><img src="./img/JSV TECH FLUX2.png" alt=""></a>
@@ -123,16 +123,12 @@
                 <div id="head">
                     <div id="profile"><img src="./img/developer.png" alt=""></div>
                     <i class='bx bxs-message-alt-x'></i>
-
                 </div>
-                <div id="chatproces">
-                    <div id="bottom">
-                        <form action="">
-                        <input type="text" placeholder="Message..">
-                        <button type="submit"><i class='bx bxs-send'></i>
-                        </button>
-                    </form>
-                    </div>
+                <div id="chatproces"> </div>
+                <div id="bottom">
+                    <input type="text" placeholder="Message.." class="text">
+                    <button type="submit" class="sendbtn">send<i class='bx bxs-send'></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -215,10 +211,13 @@
 
         </section>
         <section class="faq">
-            <div class=" q1" id="faq">
-                <div id="heading"><h1>Why is a SEO important?</h1><span id="minimaiz">+</span></div>
+            <div class="accordian" id="faq">
+                <div class="question">
+                    <h3>Why is a SEO important?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
                 
-                <p >
+                <div class="answer">
                     SEO (Search Engine Optimization) is important because it helps websites and businesses thrive in the digital world by improving their visibility, credibility, and user experience. Here's a simplified breakdown of why SEO is crucial:
                     <ol>
                         <li><b> Increases Online Visibility</b> : SEO helps your website appear higher in search engine results, making it easier for potential customers to find you.</li>
@@ -241,12 +240,63 @@
                             <b> Helps Stay Competitive</b> : If your competitors use SEO and you don’t, you risk losing potential customers to them.
                         </li>
                     </ol>
-                </p>
+                </div>
                 
             </div>
-           
-            
-           
+            <div class="accordian">
+                <div class="question">
+                    <h3> Why is SEO important for my business?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    SEO helps improve your website’s visibility on search engines, driving organic traffic, increasing brand awareness, and boosting revenue.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>How long does it take to see results from SEO?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    SEO is a long-term strategy. While some improvements can be seen in 3-6 months, achieving significant results may take 6-12 months.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>What is the difference between on-page and off-page SEO?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    On-page SEO involves optimizing content and elements on your website, like keywords and meta tags. Off-page SEO focuses on external factors like backlinks and social signals.                    
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3> Why is keyword research essential for SEO?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Keyword research identifies the terms your audience is searching for, helping you create relevant content that ranks higher in search results.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Can SEO improve my local business visibility?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Yes, local SEO strategies, like optimizing your Google My Business profile and local keywords, can boost visibility for location-specific searches.              
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3> Does JSV Tech Flux provide customized SEO services?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Absolutely! We tailor our SEO strategies to meet your business goals, industry needs, and target audience.            
+                </div>
+            </div>
         </section>
        <section id="contact">
         <div id="conLeft">
@@ -309,6 +359,8 @@
 <script src="menu.js"></script>
 <script src="search.js"></script>
 <script src="chat.js"></script>
+<script src="faq.js"></script>
+<script src="App.js"></script>
 <script src="contactclick.js"></script>
 
 </body>
