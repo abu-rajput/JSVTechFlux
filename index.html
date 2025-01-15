@@ -8,7 +8,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="./img/log1.png" type="image/x-icon">
 </head>
-<body>
+<body onload="start()">
     <header class="headar">
         <div class="logo">
     
@@ -121,16 +121,12 @@
                 <div id="head">
                     <div id="profile"><img src="./img/developer.png" alt=""></div>
                     <i class='bx bxs-message-alt-x'></i>
-
                 </div>
-                <div id="chatproces">
-                    <div id="bottom">
-                        <form action="">
-                        <input type="text" placeholder="Message..">
-                        <button type="submit"><i class='bx bxs-send'></i>
-                        </button>
-                    </form>
-                    </div>
+                <div id="chatproces"> </div>
+                <div id="bottom">
+                    <input type="text" placeholder="Message.." class="text">
+                    <button type="submit" class="sendbtn">send<i class='bx bxs-send'></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -296,6 +292,45 @@
                 
             </div>
         </section>
+        <section class="faq">
+            <div class="accordian">
+                <div class="question">
+                    <h3>Why choose JSV Tech Flux for logo design?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    At JSV Tech Flux, we create unique, impactful, and professional logos tailored to your brand’s identity, ensuring it stands out in the market.  
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>How long does it take to design a logo with JSV Tech Flux?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    We typically deliver initial logo concepts within 3-5 business days, depending on the project requirements.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3> Does JSV Tech Flux provide customized SEO services?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    Absolutely! We tailor our SEO strategies to meet your business goals, industry needs, and target audience.            
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>Why choose JSV Tech Flux for chatbot and website services?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    We offer an all-in-one solution with expert integration, cutting-edge technology, and a customer-focused approach to meet your business goals.
+                </div>
+            </div>
+
+        </section>
        <section id="contact">
         <div id="conLeft">
             <h1>Get in touch with us. <br><span>9am</span> to<span> 7pm</span>.</h1>
@@ -358,6 +393,8 @@
 <script src="menu.js"></script>
 <script src="search.js"></script>
 <script src="chat.js"></script>
+<script src="faq.js"></script>
+<script src="App.js"></script>
 <script src="contactclick.js"></script>
 
 </body>
