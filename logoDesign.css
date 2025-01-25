@@ -104,18 +104,18 @@ body{
 
 .mesLeft, .reqRight{
     width: 70%;
-    font-size: 1rem;
+    font-size: 1.1rem;    
     color: black;
     word-wrap: break-word;
     border-radius: 0 .7rem .7rem;
-    padding: .3rem .5rem ;
+    padding: .5rem .7rem ;
     background-color:whitesmoke;
     display: inline-block;
-    box-shadow:0 0 .5px 0 ;
-    margin: .2rem 0;
+    box-shadow:0 0 0px .5px black;
+    margin: .3rem 0;
 }
 .reqRight{
-    border-radius: .7rem 0 .7rem .7rem;
+    border-radius: .7rem .7rem 0 .7rem ;
     float: right;
 }
 #fixed #chatbox #head{ 
@@ -195,21 +195,20 @@ header{
     min-height:5vw;
     display: flex;
     justify-content:space-between;
-    align-items: center;
+    align-items:center;
     padding:0 6vw;
     /* background-color: #EEF4D4; */
     background-color: white;
     /* backdrop-filter: blur(5px); */
     /* background: linear-gradient(111.5deg, rgb(228, 247, 255) 21.9%, rgb(255, 216, 194) 92.2%); */
-    
-    position:fixed;
     top:0px;
+    position: fixed;
     box-shadow: 0px 0px 4px 0px ;
-    z-index: 100;
+    z-index: 90;
 }
-header nav #aboutser{
+header nav #aboutser, #careerdown, #contdown{
     display: none;
-    
+
 }
 header #serach{
     width: 17rem;
@@ -219,13 +218,11 @@ header #serach{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    overflow: hidden;
     position: relative;
     overflow: hidden;
-    
 }
-header #serach input{
 
+header #serach input{
     font-size: 1.1rem;
     position: relative;
     outline: 0;
@@ -254,13 +251,9 @@ header #serach #searchbtn{
     font-size: x-large;
     background-color: #F1EDEE;
     top: -3px;
+       
+}
 
-}
-header nav{
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-}
 header nav ul{
     width: max-content;
     height: 100%;
@@ -268,7 +261,6 @@ header nav ul{
     /* gap: 2rem; */
     list-style: none;
     margin-top: -10px;
-
 
 }
 header .logo img{
@@ -285,10 +277,8 @@ header nav li a{
     text-decoration: none;
     text-transform: capitalize;
     /* padding-bottom: 1.4rem; */
-    /* background-color: #FF8811; */
+
 }
-
-
 header nav a #service{
     position: relative;
     display: flex;
@@ -298,14 +288,13 @@ header nav a #service{
 header nav #service i{
     transform: rotate(90deg);
 }
-
 header nav li:hover a{
     text-decoration: underline #FF8811;
 }
 header nav #service:hover #aboutser{
-    width: 86.7%;
+    width: 86%;
     z-index: -1;
-    /* height: 300px; */
+    /* max-height: 300px; */
     position: absolute;
     left: 0px;
     margin: 1.7vw 6vw;
@@ -319,8 +308,9 @@ header nav #service:hover #aboutser{
 }
 header nav  #aboutser .ser a{
     width: 28.5vw;    
-    height: 9rem;
-    display: flex;overflow: hidden;
+    height:9rem;
+    display: flex;
+    overflow: hidden;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
@@ -349,12 +339,61 @@ header nav  #aboutser .ser .icon img{
     align-self: center;
     object-fit: cover;
     /* background-color: lightblue; */
-
 }
 header nav  #aboutser .ser:hover.ser{
     background-color: #FF8811;
 }
 
+header nav #career a{
+    position: relative;
+}
+header nav #career:hover #careerdown{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 50% auto;
+    margin-top: 1.6%;
+    overflow: hidden;
+    background-color: white;
+    border-radius:0 0 .5rem .5rem ;
+}
+header nav #career #careerdown a{
+    text-decoration: none;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+
+}
+header nav #careerdown a:hover, #contdown a:hover{
+    background-color: #FF8811;
+}
+header nav #career i, .contact i{
+    transform: rotate(90deg);
+}
+header nav .contact:hover #contdown{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 50% auto;
+    margin-top: 1.6%;
+    overflow: hidden;
+    background-color: white;
+    border-radius:0 0 .5rem .5rem ;
+}
+header nav #contdown a{
+    display: flex;
+    gap: .5rem;
+    text-decoration: none;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+
+
+}
+header nav #contdown a img{
+    height: 1.5rem;
+}
 header #menu{
     display: none;
     position: relative;
@@ -364,11 +403,9 @@ header #menu{
     font-size: 1.5rem;
     
 }
-
 header #menu i{
     margin-top: 5px;
 }
-
 header #menu #cros{
     display: none;
     margin-left: 18px;
@@ -410,7 +447,7 @@ header #menu #cros{
     height: fit-content;
     position: absolute;
     padding:0 6vw;
-    z-index: 90;
+    z-index: 80;
     color: black;
     margin-top: 8rem;
     
@@ -900,7 +937,7 @@ footer  #copy{
         height: fit-content;
         position: absolute;
         padding:5vw;
-        z-index: 90;
+        z-index: 80;
         color: black;
         margin-top: 15vw;    
     }
@@ -954,7 +991,7 @@ footer  #copy{
         width: 100%;
         height: 0px;
         position: absolute;
-        top:115%;
+        top:105%;
         left: 0;
         right: 0;
         overflow: hidden;
@@ -976,27 +1013,28 @@ footer  #copy{
         padding: 20px;
     
     }
-    header nav #service{
+    header nav #service, #career, .contact{
         position: relative;
     }
+    
     header nav #service:hover #aboutser {
         width: 200%;
         height: fit-content;
         flex-direction: column;
-        top: -100%;
+        top: -105%;
         left: 75%;
         position: absolute;
     }
-    header nav #service:hover i{
-        transform: rotate(0deg);
-    }
+    
     header nav ul li #aboutser .ser {
         width: 100%;
     }
     header nav #service:hover .ser {
         background-color: transparent;
     }
-
+    header nav #service:hover i, #career:hover i,.contact:hover i{
+        transform: rotate(0deg);
+    }
     header nav ul li #aboutser .ser .icon, header nav ul li #aboutser .ser p{
         display: none;
 
@@ -1008,9 +1046,26 @@ footer  #copy{
         text-align: left;
         font-size: large;
     }
+    header nav #career:hover #careerdown{
+        position: absolute;
+        width: 200%;
+        height: fit-content;
+        flex-direction: column;
+        top: -0%;
+        left: 90%;
+    }
+    header nav .contact:hover #contdown{
+        position: absolute;
+        width: 200%;
+        height: fit-content;
+        flex-direction: column;
+        top: -0%;
+        left: 90%;
+    }
     header .logo img{
         width: 18vw;
         margin-top: .4rem;
+        
     }
     header #serach{
         width: 12rem;
@@ -1067,8 +1122,8 @@ footer  #copy{
     #contact{
         width: 100%;
         height: 52vh;
-        margin-bottom: 6rem;
-        margin-top: 0px;
+        margin-bottom: 8rem;
+        margin-top: 3px;
 
     }
     #contact #conLeft{

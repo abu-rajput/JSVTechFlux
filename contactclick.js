@@ -1,8 +1,8 @@
-let contact = document.getElementById('mobcontact');
+let career = document.getElementById('ship');
 let about = document.getElementById('mobabout');
 
 try{
-    contact.addEventListener('click',contactClose);
+    career.addEventListener('click',contactClose);
     about.addEventListener('click',contactClose);
 
 }

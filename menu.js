@@ -2,6 +2,7 @@ let menu = document.getElementById('menu');
 let nav = document.getElementById('navbar');
 let wrong = document.getElementById('cros');
 let menuicon = document.getElementsByClassName('bx-menu')[0];
+let service = document.getElementById('service');
 
 
 
@@ -13,7 +14,7 @@ menu.addEventListener('click',show);
 
 function show(){
     if(nav.style.height=="0px"){
-        nav.style.height="55vh";
+        nav.style.height="100vh";
         nav.style.overflow="scroll"
         wrong.style.display="block"; 
         menuicon.style.display="none";

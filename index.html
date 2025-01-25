@@ -25,7 +25,8 @@
             <ul id="navbar">
             <li><a href="index.html">home</a></li>
             <li ><a href="#about" id="mobabout">about</a></li>
-            <li id="service"><a href="#services" >services <i class='bx bx-chevron-right'></i></a> 
+            <li id="service">
+                <a href="#services" >services<i class='bx bx-chevron-right'></i></a> 
                 <div id="aboutser">
                     <div class="sercard1 ser"><a href="webDesign.html">
                         <div class="icon">
@@ -89,8 +90,23 @@
                     </div></a>
                 </div>
             </li>
-            <li><a href="ourWork.html">our work</a></li>
-            <li><a href="#contact" id="mobcontact">contact</a></li></ul>
+            <!-- <li><a href="ourWork.html">our work</a></li> -->
+            <li id="career">
+                <a href="#">career <i class='bx bx-chevron-right'></i></a>
+                <div id="careerdown">
+                    <a href="career.html">career</a>
+                    <a href="#contact" id="ship">Partnership</a>
+                </div>
+            </li>
+            <li class="contact">
+                <a href="#contact" id="mobcontact">contact <i class='bx bx-chevron-right'></i></a>
+                <div id="contdown">
+                    <a href="tel:+918777351046"> +91 8777351046</a></span>
+                    <a href="https://wa.me/+918777351046">whatsapp<img src="./img/whatsapp2.png" alt=""></a>
+                </div>
+            </li>
+
+            </ul>
         </nav>
         <div id="menu">
             <p><i class='bx bx-menu'></i></p>
@@ -111,7 +127,7 @@
         <div id="fixed">
             <div class="message">
                 <i class='bx bxs-message-detail'></i>
-                <p>" Welcome to JSV TECH FLUX!<br> I’m FluxBot, your digital assistant.</p>
+                <p>"Welcome to JSV TECH FLUX!<br> I’m FluxBot, your digital assistant.</p>
                 <span id="messageExit">x</span>
             </div>
             <div id="chat">
@@ -138,14 +154,11 @@
         <section id="about">
             <div class="left">
                 <div><p id="cap"> <span id="dobleline"> </span>About</p></div>
-                <h1 class=".logo">JSV Tech Flux.</h1>
+                <h1 class="logo">JSV Tech Flux.</h1>
                 <p>JSV TECH FLUX PVT LTD is an IT company that specializes in providing technology-related products, services, and solutions. We operate across a wide range of domains, including web development, digital marketing, chatbot development, logo design, and SEO services. Serving industries from A to Z, including healthcare, finance, education, e-commerce, automotive, retail, real estate, hospitality, manufacturing, entertainment, and more, we offer specialized solutions tailored to meet the unique needs of each client.</p>
             </div>
             <div class="right">
-                
-                <!-- <img src="./img/about2.png" alt=""> -->
                 <img src="./img/about 3d.png" alt="">
-
             </div>
 
         </section>
@@ -225,7 +238,7 @@
         <section id="focus">
             <div id="left">
                 <div><p id="cap"> <span id="dobleline"></span>Focus sectors</p></div>
-                <h1>Indurtries we serve</h1>
+                <h1>Industries we serve</h1>
                 <p>In web development, companies often focus on specific sectors or industries to provide targeted solutions that meet the unique needs of each. Here are some common sectors that web development companies focus on, along with the specialized services they might offer:</p>
             </div>
             <div id="right">
@@ -295,6 +308,24 @@
         <section class="faq">
             <div class="accordian">
                 <div class="question">
+                    <h3>Why choose JSV Tech Flux for chatbot and website services?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    We offer an all-in-one solution with expert integration, cutting-edge technology, and a customer-focused approach to meet your business goals.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
+                    <h3>How long does it take to build a website?</h3>
+                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
+                </div>
+                <div class="answer">
+                    The timeline depends on the complexity of your requirements. On average, we deliver basic websites in 1 weeks, while more complex projects may take 4-6 weeks.
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question">
                     <h3>Why choose JSV Tech Flux for logo design?</h3>
                     <span ><i class='minimaiz bx bx-chevron-right'></i></span>
                 </div>
@@ -320,15 +351,7 @@
                     Absolutely! We tailor our SEO strategies to meet your business goals, industry needs, and target audience.            
                 </div>
             </div>
-            <div class="accordian">
-                <div class="question">
-                    <h3>Why choose JSV Tech Flux for chatbot and website services?</h3>
-                    <span ><i class='minimaiz bx bx-chevron-right'></i></span>
-                </div>
-                <div class="answer">
-                    We offer an all-in-one solution with expert integration, cutting-edge technology, and a customer-focused approach to meet your business goals.
-                </div>
-            </div>
+            
 
         </section>
        <section id="contact">
@@ -342,10 +365,11 @@
         <div id="conRight">
             <!-- <h1>Say Something</h1> -->
             <form action="#">
-                <input type="text" placeholder="YOUR NAME_">
-                <input type="email" placeholder="YOUR E-MAIL_">
+                <input type="text" placeholder="YOUR NAME_" name="name">
+                <input type="tel" placeholder="Mobile Number" name="telnumber">
+                <input type="email" placeholder="YOUR E-MAIL_" name="email">
                 <textarea name=""  rows="10" id="message" placeholder="MESSAGE_"></textarea >
-                <button>SEND</button>
+                <button id="send">SEND</button>
 
             </form>
         </div>
@@ -358,7 +382,6 @@
                 <span><a href="#" ><img src="./img/twitter.png" alt="" ></a></span>
                 <span><a href="#"><img src="./img/instagram.png" alt="" ></a></span>
                 <span><a href="#" ><img src="./img/youtube.png" alt="" id="youtube"></a></span>
-
                 <span><a href="https://wa.me/+918777351046"><img src="./img/whatsapp2.png" alt=""></a></span>
                 <span><a href="#"><img src="./img/linkdin2.png" alt="" ></a></span>
             </div>
@@ -366,28 +389,31 @@
         <div id="links">
             <ul>
             <h3>Explore</h3>
-                <a href="#about"><li>About Company</li></a>
-                <a href="#"><li>Our Team</li></a>
-                <a href="#"><li>Our Work</li></a>
+                <a href="about.html"><li>About Us</li></a>
+                <a href="ourTeam.html"><li>Our Team</li></a>
+                <!-- <a href="ourWork.html"><li>Our Work</li></a> -->
 
             </ul>
             <ul>
                 <h3>Quick Links</h3>
                     <a href="#"><li>Life at JSV Tech Flux</li></a>
-                    <a href="#"><li>Career</li></a>
+                    <a href="career.html"><li>Career</li></a>
                     <a href="#contact"><li>Contact Us</li></a>
 
             </ul>
             <ul>
                 <h3>Services</h3>
-                    <a href="#"><li>Web developement</li></a>
-                    <a href="#"><li>Digital Marketing</li></a>
-                    <a href="#"><li>ChatBot</li></a>
-                    <a href="#"><li>SEO</li></a>
+                    <a href="webDesign.html"><li>Web Developement</li></a>
+                    <a href="logoDesign.html"><li>Logo Design</li></a>
+                    <a href="seo.html"><li>SEO</li></a>
+                    <a href="digitalMarketing.html"><li>Digital Marketing</li></a>
+                    <a href="chatBot.html"><li>ChatBot</li></a>
+                    <a href="chatWeb.html"><li>ChatBot + Website</li></a>
+                    
                 </ul>
         </div>
         <hr>
-        <p id="copy">JSV Tech Flex Pvt Ltd &copy; 2024.</p>
+        <p id="copy">JSV Tech Flex Pvt Ltd &copy; 2025.</p>
 
     </footer>
 <script src="menu.js"></script>
